@@ -1,0 +1,60 @@
+/* 
+  Custom styles for Hiro Barbershop Barbershop
+  All main styling is handled via Tailwind classes and Tailwind Config.
+*/
+
+/* Hide scrollbar for clean aesthetic if needed, optional */
+::-webkit-scrollbar {
+    width: 8px;
+}
+::-webkit-scrollbar-track {
+    background: #0D0D0D; 
+}
+::-webkit-scrollbar-thumb {
+    background: #4e4639; 
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #c5a059; 
+}
+
+/* --- Scroll Reveal Animations --- */
+.reveal {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 0.8s cubic-bezier(0.5, 0, 0, 1), transform 0.8s cubic-bezier(0.5, 0, 0, 1);
+}
+.reveal.reveal-left {
+    transform: translateX(-40px);
+}
+.reveal.reveal-right {
+    transform: translateX(40px);
+}
+.reveal.reveal-scale {
+    transform: scale(0.95);
+}
+.reveal.reveal-visible {
+    opacity: 1;
+    transform: translateY(0) translateX(0) scale(1);
+}
+
+.reveal-delay-100 { transition-delay: 100ms; }
+.reveal-delay-200 { transition-delay: 200ms; }
+.reveal-delay-300 { transition-delay: 300ms; }
+.reveal-delay-400 { transition-delay: 400ms; }
+
+/* Optimize animations for mobile devices to reduce lag */
+@media (max-width: 768px) {
+    .reveal {
+        transition-duration: 0.6s;
+    }
+    .reveal-left, .reveal-right {
+        transform: translateY(20px); /* Switch horizontal to vertical on mobile for smoother scrolling */
+    }
+}
+@media (prefers-reduced-motion: reduce) {
+    .reveal {
+        transition: none !important;
+        opacity: 1 !important;
+        transform: none !important;
+    }
+}

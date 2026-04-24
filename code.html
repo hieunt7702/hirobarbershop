@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="vi">
+
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;600;700&amp;family=Work+Sans:wght@400;600&amp;display=swap"
+    rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+    rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+    rel="stylesheet" />
+  <script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+            "on-secondary-fixed-variant": "#474746",
+            "primary-container": "#c5a059",
+            "primary": "#e9c176",
+            "surface-container": "#1e2020",
+            "on-secondary": "#313030",
+            "background": "#0D0D0D",
+            "secondary-fixed-dim": "#c8c6c5",
+            "surface-container-high": "#282a2b",
+            "secondary": "#c8c6c5",
+            "surface-container-lowest": "#0c0f0f",
+            "tertiary": "#c9c6c5",
+            "surface-variant": "#333535",
+            "on-tertiary": "#313030",
+            "surface": "#121414",
+            "tertiary-container": "#a7a5a4",
+            "inverse-on-surface": "#2f3131",
+            "outline-variant": "#4e4639",
+            "on-primary": "#412d00",
+            "on-tertiary-fixed": "#1c1b1b",
+            "outline": "#9a8f80",
+            "on-background": "#e2e2e2",
+            "on-secondary-fixed": "#1c1b1b",
+            "tertiary-fixed": "#e5e2e1",
+            "surface-tint": "#e9c176",
+            "secondary-container": "#474746",
+            "on-primary-fixed": "#261900",
+            "on-secondary-container": "#b7b5b4",
+            "error-container": "#93000a",
+            "surface-dim": "#121414",
+            "on-primary-container": "#4e3700",
+            "error": "#ffb4ab",
+            "on-error-container": "#ffdad6",
+            "primary-fixed-dim": "#e9c176",
+            "on-error": "#690005",
+            "surface-container-highest": "#333535",
+            "on-surface-variant": "#d1c5b4",
+            "surface-bright": "#37393a",
+            "inverse-surface": "#e2e2e2",
+            "inverse-primary": "#775a19",
+            "on-primary-fixed-variant": "#5d4201",
+            "on-tertiary-fixed-variant": "#474646",
+            "on-surface": "#e2e2e2",
+            "tertiary-fixed-dim": "#c9c6c5",
+            "on-tertiary-container": "#3c3b3b",
+            "surface-container-low": "#1a1c1c",
+            "secondary-fixed": "#e5e2e1",
+            "primary-fixed": "#ffdea5"
+          },
+          "fontFamily": {
+            "body-lg": ["Work Sans"],
+            "headline-md": ["Noto Serif"],
+            "label-caps": ["Work Sans"],
+            "display-lg": ["Noto Serif"]
+          },
+          "fontSize": {
+            "body-lg": ["18px", { "lineHeight": "1.6", "letterSpacing": "0.01em", "fontWeight": "400" }],
+            "headline-md": ["32px", { "lineHeight": "1.2", "letterSpacing": "0.01em", "fontWeight": "600" }],
+            "label-caps": ["12px", { "lineHeight": "1.4", "letterSpacing": "0.2em", "fontWeight": "600" }],
+            "display-lg": ["48px", { "lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700" }]
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    body {
+      background-color: #0D0D0D;
+      color: #e2e2e2;
+    }
+
+    .art-deco-border {
+      border: 1px solid rgba(197, 160, 89, 0.2);
+      position: relative;
+    }
+
+    .art-deco-border::after {
+      content: '';
+      position: absolute;
+      top: 4px;
+      left: 4px;
+      right: 4px;
+      bottom: 4px;
+      border: 1px solid rgba(197, 160, 89, 0.1);
+      pointer-events: none;
+    }
+
+    .gold-underline {
+      position: relative;
+    }
+
+    .gold-underline::after {
+      content: '';
+      position: absolute;
+      bottom: -8px;
+      left: 0;
+      width: 60px;
+      height: 2px;
+      background-color: #C5A059;
+    }
+
+    .slot-unavailable {
+      background-image: linear-gradient(to top right, transparent calc(50% - 1px), #C5A059 50%, transparent calc(50% + 1px));
+    }
+  </style>
+</head>
+
+<body class="font-body-lg">
+  <!-- TopAppBar -->
+  <header
+    class="fixed top-0 w-full z-50 flex justify-between items-center px-12 py-6 bg-[#0D0D0D] border-[#C5A059]/20 border-solid border-b-[1px]">
+    <div class="text-xl font-bold tracking-[0.2em] text-[#C5A059] font-headline-md">HIRO BARBERSHOP</div>
+    <nav class="hidden md:flex gap-12">
+      <a class="text-[#C5A059] border-b border-[#C5A059] pb-1 font-label-caps text-[10px] tracking-widest"
+        href="#">SERVICES</a>
+      <a class="text-neutral-400 font-medium tracking-widest text-[10px] hover:text-[#C5A059] transition-all duration-300 font-label-caps"
+        href="#">PORTFOLIO</a>
+      <a class="text-neutral-400 font-medium tracking-widest text-[10px] hover:text-[#C5A059] transition-all duration-300 font-label-caps"
+        href="#">TEAM</a>
+      <a class="text-neutral-400 font-medium tracking-widest text-[10px] hover:text-[#C5A059] transition-all duration-300 font-label-caps"
+        href="#">BOOKING</a>
+    </nav>
+    <button
+      class="bg-primary-container text-on-primary-fixed-variant px-6 py-2 font-label-caps text-[10px] tracking-widest font-bold hover:opacity-90 transition-all">BOOK
+      NOW</button>
+  </header>
+  <main class="pt-24">
+    <!-- Hero Section -->
+    <section class="relative h-[921px] flex items-center px-12 max-w-screen-2xl mx-auto overflow-hidden">
+      <div class="z-10 max-w-3xl">
+        <span class="font-label-caps text-primary mb-4 block tracking-[0.4em]">TRADITION REFINED</span>
+        <h1 class="font-display-lg text-6xl text-on-background mb-8 leading-tight">
+          Đẳng cấp kiểu tóc nam hiện đại <br />
+          <span class="text-primary italic">Fade chuẩn form</span> – phục vụ tận tâm
+        </h1>
+        <div class="flex gap-6 items-center">
+          <button class="bg-primary text-on-primary px-10 py-4 font-label-caps tracking-widest font-bold">RESERVE
+            SEAT</button>
+          <div class="flex items-center gap-3 text-on-surface-variant font-label-caps">
+            <span class="material-symbols-outlined text-primary">play_circle</span>
+            WATCH THE EXPERIENCE
+          </div>
+        </div>
+      </div>
+      <div class="absolute right-0 top-0 w-2/3 h-full grayscale opacity-40 mix-blend-lighten">
+        <img class="w-full h-full object-cover"
+          data-alt="Close-up of a master barber meticulously detailing a low fade haircut in a dimly lit high-end barbershop with warm gold accents"
+          src="https://lh3.googleusercontent.com/aida-public/AB6AXuDcG_9rfmr1sMI6q0bTs8wuTjVH4ll3nMfWSKix48UksApnPU4c2kqoTa7iTQxEnWlnDBSo93Am2EJdTOp8JzWxGed90Ghq9b0jMibSNEHA4tKeFNZ9aNMKLQAllPETAk8Rci7x_6hq4mO-3bHCEFz6OMdEiZvAcgspvlFo3x04CoPpBXxAh1kp5o5hwYXAJqeIb6sOpaU_LUS4yu6Z2gtCsUnsLdvYj7FLsszpwEn-5Ys13DoUnpk1cbFC-640JKxqmB1YFkNN0rc" />
+      </div>
+    </section>
+    <!-- Why Choose Us -->
+    <section class="py-24 px-12 max-w-screen-2xl mx-auto">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-12">
+        <div class="flex flex-col items-center text-center space-y-4">
+          <div class="w-16 h-16 flex items-center justify-center border border-primary/30 rotate-45 mb-4">
+            <span class="material-symbols-outlined text-primary -rotate-45"
+              style="font-variation-settings: 'FILL' 1;">content_cut</span>
+          </div>
+          <h3 class="font-headline-md text-xl">CHUYÊN NGHIỆP</h3>
+          <p class="text-on-surface-variant text-sm font-body-lg opacity-70">Từng đường kéo được thực hiện bởi những
+            nghệ nhân hàng đầu.</p>
+        </div>
+        <div class="flex flex-col items-center text-center space-y-4">
+          <div class="w-16 h-16 flex items-center justify-center border border-primary/30 rotate-45 mb-4">
+            <span class="material-symbols-outlined text-primary -rotate-45"
+              style="font-variation-settings: 'FILL' 1;">schedule</span>
+          </div>
+          <h3 class="font-headline-md text-xl">ĐÚNG GIỜ</h3>
+          <p class="text-on-surface-variant text-sm font-body-lg opacity-70">Sự tôn trọng thời gian của quý ông là ưu
+            tiên tuyệt đối.</p>
+        </div>
+        <div class="flex flex-col items-center text-center space-y-4">
+          <div class="w-16 h-16 flex items-center justify-center border border-primary/30 rotate-45 mb-4">
+            <span class="material-symbols-outlined text-primary -rotate-45"
+              style="font-variation-settings: 'FILL' 1;">local_fire_department</span>
+          </div>
+          <h3 class="font-headline-md text-xl">PHONG CÁCH</h3>
+          <p class="text-on-surface-variant text-sm font-body-lg opacity-70">Luôn cập nhật những xu hướng tóc nam thịnh
+            hành nhất thế giới.</p>
+        </div>
+        <div class="flex flex-col items-center text-center space-y-4">
+          <div class="w-16 h-16 flex items-center justify-center border border-primary/30 rotate-45 mb-4">
+            <span class="material-symbols-outlined text-primary -rotate-45"
+              style="font-variation-settings: 'FILL' 1;">dry_cleaning</span>
+          </div>
+          <h3 class="font-headline-md text-xl">DỊCH VỤ VIP</h3>
+          <p class="text-on-surface-variant text-sm font-body-lg opacity-70">Không gian riêng tư, thư giãn cùng đồ uống
+            hảo hạng.</p>
+        </div>
+      </div>
+    </section>
+    <!-- Services Grid -->
+    <section class="py-24 bg-surface-container-low px-12">
+      <div class="max-w-screen-2xl mx-auto">
+        <div class="flex justify-between items-end mb-16">
+          <div>
+            <span class="font-label-caps text-primary tracking-widest block mb-2 uppercase">Menu of services</span>
+            <h2 class="font-headline-md text-4xl gold-underline">DỊCH VỤ ĐẲNG CẤP</h2>
+          </div>
+          <p class="max-w-md text-on-surface-variant font-body-lg italic opacity-60">
+            Chúng tôi không chỉ cắt tóc, chúng tôi kiến tạo phong thái của một quý ông hiện đại.
+          </p>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <!-- Service 1 -->
+          <div class="art-deco-border p-8 group hover:bg-primary/5 transition-colors duration-500">
+            <div class="flex justify-between items-start mb-6">
+              <span class="font-label-caps text-primary opacity-50">01</span>
+              <span class="text-primary font-headline-md">300k</span>
+            </div>
+            <h4 class="font-headline-md text-2xl mb-4 tracking-wide uppercase">Cắt tỉa nghệ thuật</h4>
+            <p class="text-on-surface-variant font-body-lg text-sm mb-6 leading-relaxed">Tư vấn kiểu tóc phù hợp với
+              khuôn mặt và phong cách cá nhân.</p>
+            <ul class="space-y-2 text-[10px] font-label-caps text-primary/70 tracking-widest">
+              <li>• GỘI ĐẦU THƯ GIÃN</li>
+              <li>• TẠO KIỂU CAO CẤP</li>
+            </ul>
+          </div>
+          <!-- Service 2 -->
+          <div class="art-deco-border p-8 group bg-surface-container-high border-primary/40">
+            <div class="flex justify-between items-start mb-6">
+              <span class="font-label-caps text-primary opacity-50">02</span>
+              <span class="text-primary font-headline-md">450k</span>
+            </div>
+            <h4 class="font-headline-md text-2xl mb-4 tracking-wide uppercase">Fade Chuyên Sâu</h4>
+            <p class="text-on-surface-variant font-body-lg text-sm mb-6 leading-relaxed">Kỹ thuật Fade sắc nét, chuyển
+              màu mượt mà chuẩn quốc tế.</p>
+            <ul class="space-y-2 text-[10px] font-label-caps text-primary/70 tracking-widest">
+              <li>• SKIN FADE / TAPER</li>
+              <li>• RAZOR LINE DETAIL</li>
+            </ul>
+          </div>
+          <!-- Service 3 -->
+          <div class="art-deco-border p-8 group hover:bg-primary/5 transition-colors duration-500">
+            <div class="flex justify-between items-start mb-6">
+              <span class="font-label-caps text-primary opacity-50">03</span>
+              <span class="text-primary font-headline-md">800k</span>
+            </div>
+            <h4 class="font-headline-md text-2xl mb-4 tracking-wide uppercase">Uốn Texture/Sidepart</h4>
+            <p class="text-on-surface-variant font-body-lg text-sm mb-6 leading-relaxed">Sử dụng thuốc uốn organic cao
+              cấp bảo vệ tóc tối ưu.</p>
+            <ul class="space-y-2 text-[10px] font-label-caps text-primary/70 tracking-widest">
+              <li>• VOLUMIZING TREATMENT</li>
+              <li>• LONG-LASTING HOLD</li>
+            </ul>
+          </div>
+          <!-- Service 4 -->
+          <div class="art-deco-border p-8 group hover:bg-primary/5 transition-colors duration-500">
+            <div class="flex justify-between items-start mb-6">
+              <span class="font-label-caps text-primary opacity-50">04</span>
+              <span class="text-primary font-headline-md">200k</span>
+            </div>
+            <h4 class="font-headline-md text-2xl mb-4 tracking-wide uppercase">Cạo mặt truyền thống</h4>
+            <p class="text-on-surface-variant font-body-lg text-sm mb-6 leading-relaxed">Liệu trình cạo mặt khăn nóng,
+              massage thư giãn vùng mặt.</p>
+            <ul class="space-y-2 text-[10px] font-label-caps text-primary/70 tracking-widest">
+              <li>• HOT TOWEL STEAM</li>
+              <li>• AFTERSHAVE BALM</li>
+            </ul>
+          </div>
+          <!-- Service 5 -->
+          <div
+            class="md:col-span-2 art-deco-border p-8 bg-primary/10 border-primary/20 flex flex-col md:flex-row justify-between items-center">
+            <div>
+              <h4 class="font-headline-md text-3xl mb-4 tracking-widest uppercase">Combo Hiro Barbershop</h4>
+              <p class="text-on-surface-variant font-body-lg mb-4">Trải nghiệm toàn diện: Cắt + Fade + Cạo + Chăm sóc da
+                mặt chuyên sâu.</p>
+              <span class="text-primary font-headline-md text-3xl">1.200k</span>
+            </div>
+            <button
+              class="mt-6 md:mt-0 bg-primary text-on-primary px-12 py-4 font-label-caps tracking-widest font-bold">SELECT
+              COMBO</button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Portfolio (Bento Grid) -->
+    <section class="py-24 px-12 max-w-screen-2xl mx-auto">
+      <h2 class="font-headline-md text-4xl mb-16 text-center">TÁC PHẨM CỦA CHÚNG TÔI</h2>
+      <div class="grid grid-cols-1 md:grid-cols-4 grid-rows-2 gap-4 h-[800px]">
+        <div class="md:col-span-2 md:row-span-2 relative overflow-hidden group">
+          <img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+            data-alt="High-contrast black and white shot of a sharp skin fade haircut on a male model with visible precision details"
+            src="https://lh3.googleusercontent.com/aida-public/AB6AXuAoSAKYHLTCpTvkn3CjvMbego6_uSgsQITL4K4jcQnqmN0YBBmsTp0-BSrg1J_1QEwjpn2gwWjniJyXQlIGy9siOz69VZsH0J2iwkZVdfBo6LsY8__6yKEs_kRFImYAgxus-aQfjGk8ZVW-AN5cDnk3Bcc2EvVq97Hgg6W8IbSpabb2naE1SyE6NY38VTxtIkNm-cPrRvHGVFzgESwZV3VdC7DrvPC-CSmSfDZZQuQU_Wtydxr5N0HvT57DDuZbt2cCURREhwd6Kho" />
+          <div
+            class="absolute inset-0 bg-black/40 flex items-end p-8 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+            <span class="font-label-caps text-white border-l-2 border-primary pl-4">CLASSIC FADE • 2024</span>
+          </div>
+        </div>
+        <div class="md:col-span-1 md:row-span-1 relative overflow-hidden group">
+          <img
+            class="w-full h-full object-cover grayscale transition-transform duration-700 group-hover:scale-110 group-hover:grayscale-0"
+            data-alt="Side profile of a modern textured crop haircut with clean razor lines on a young man"
+            src="https://lh3.googleusercontent.com/aida-public/AB6AXuCQM82O7YzS7grMcHp0N4caLdp9BkfCYJUABQDMvH_s9kYsaDmwAWt5FIiFo7kKu42RXZTJtX9a3ez8E1VAhjJ6Gr7KRT1yt3N2k3UWfOKA0FblKCrvaWhRSovejStUbNruMZXdChe7b9SV6cMED9wazTyMLw3-vcDqqYH7HutnA32FTAixJ0i0nP_DU6TJeJfWHm4kO3IE9qQ6FAieu2y5UthyeYH57ivmYYz5n1C5AJAdal8BDBZuJDDANscNhQyOExZaLK10XkE" />
+        </div>
+        <div class="md:col-span-1 md:row-span-2 relative overflow-hidden group">
+          <img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+            data-alt="Close up of a gentleman's groomed beard and slick back hairstyle in a luxury barbershop setting"
+            src="https://lh3.googleusercontent.com/aida-public/AB6AXuA3IxdASxBM36b2Nm9_2Qz7IICYnOF5TAEHyZJRdMw86BtAPSzLyuqqrYxD6ng_pnJJCbZYirzDUQT7m6qA6DVMlJKpIqPFMNZu8Vjoz1s88iX2GNB89thD59ceaoUhSdagtodyazRmefqWOcX9xxtsaae6y9z36_aKxEipD7U4fYGUkP5Jz_sTSyT1ulRfkAy_UhRopdx3xi09BEzUCiN4r-VQxF8NKulY73I6IJ2Nf5G1FMqeCEEYt_tBxu1eBE6dpuiVts5CATc" />
+        </div>
+        <div class="md:col-span-1 md:row-span-1 relative overflow-hidden group">
+          <img
+            class="w-full h-full object-cover grayscale transition-transform duration-700 group-hover:scale-110 group-hover:grayscale-0"
+            data-alt="Barber hands using a straight razor to clean the neck line of a customer, focus on the tool and craftsmanship"
+            src="https://lh3.googleusercontent.com/aida-public/AB6AXuBxx2RES-WJB3fQBTrFzFKkZylUDd6QaZjSKUIb5Us1_Nsce59RPCG1iILgwkcgJfxulq22hgG7Ro9QpkEXYeMxxtCYU8rh5za82onGZvRu_bBU4NiIl4-laRQZZlPi_7hC0FYuBLxm4cQEOMRFsZNgjnTwQJt4NC3vEAJv173986rUMRZODxBKScolJxRVlRUj9hLE7IBddONyF-REWG7OC3uI3FPkI30ZiLM4MVqCttRrbwHQ_JABPtmB6huwWRovzMrZICwG90s" />
+        </div>
+      </div>
+    </section>
+    <!-- Barber Team -->
+    <section class="py-24 bg-[#141414] px-12">
+      <div class="max-w-screen-2xl mx-auto">
+        <div class="text-center mb-16">
+          <span class="font-label-caps text-primary tracking-[0.3em] uppercase block mb-4">The Masters</span>
+          <h2 class="font-headline-md text-4xl uppercase">ĐỘI NGŨ NGHỆ NHÂN</h2>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+          <div class="text-center group">
+            <div class="relative mb-6 overflow-hidden aspect-[4/5] art-deco-border">
+              <img
+                class="w-full h-full object-cover grayscale transition-all duration-500 group-hover:grayscale-0 group-hover:scale-105"
+                data-alt="Portrait of a professional barber with tattoos and stylish clothing looking confidently at the camera"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuB3Jm2t_s75OwyxJXyW9b7KWQY4IN_fmov9I6SGPcbXs1Y36vFGiG1T2Fn2Hu8VGFn975gKpo50DrY84eEn_Cgbl7YYuHX2Ic3io4eC1ttl8gYgnoPweosx2TWYRH3l4xol7Ia85Y3okppjG-3pUxQZtitpou5sPDAnki7t7GeCr1iZjEJQDwfU7vkHIGXgPTWt1L2yLTo72EXYOYns5eFdC7N2CUIUy367rEWg2Z44_N40zYNK8wHW3dRqFlMcPvzMX0ZLbhT1ocI" />
+            </div>
+            <h4 class="font-headline-md text-2xl text-primary">Minh Fade Master</h4>
+            <p class="font-label-caps text-[10px] tracking-widest text-on-surface-variant opacity-60">FOUNDER &amp;
+              ARTISTIC DIRECTOR</p>
+          </div>
+          <div class="text-center group">
+            <div class="relative mb-6 overflow-hidden aspect-[4/5] art-deco-border">
+              <img
+                class="w-full h-full object-cover grayscale transition-all duration-500 group-hover:grayscale-0 group-hover:scale-105"
+                data-alt="Professional barber with a clean minimalist style, focused look, holding a spray bottle"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuD6WVl44LNYlsreOqLQAHwzkxPt80lZ0Cs4CkyQzKTNsnTcdC-VDPHczQXpahTfsK6w4yroVXmKb7KcoTbFiXZtaYIEpkh4E7aHKPXNX5xv5QauRJeT-vKrTcyx2dgXRKDZDcztuI_cev5fhjFg4eipPzScmSBG9TI0TZ7HibLKC8cMqX-wKkkP3-xxmLqzxgO-MPxJ9oTwgLP3ZUcXjZJIUKliyu-scsR3tvhxk1OfKx4jr98iH_B-bp5SZQhbpgZ9vYoVCuSQiPc" />
+            </div>
+            <h4 class="font-headline-md text-2xl text-primary">Huy Korean Style</h4>
+            <p class="font-label-caps text-[10px] tracking-widest text-on-surface-variant opacity-60">TEXTURE &amp; PERM
+              SPECIALIST</p>
+          </div>
+          <div class="text-center group">
+            <div class="relative mb-6 overflow-hidden aspect-[4/5] art-deco-border">
+              <img
+                class="w-full h-full object-cover grayscale transition-all duration-500 group-hover:grayscale-0 group-hover:scale-105"
+                data-alt="Experienced barber with a thick beard and vintage style clothing in a dark studio setting"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuD6JajMwLcnjknBN7VtqzncLmuWRWRib1s2Gzts4-gbNMchS2Kt1D6O_-sdNvSqqbvC6cOwIHFwzhrnKoKt29K6be3nv-bHyKdPK5JanvhqHWGKIzw25y7gMdQKjpThbUeq5IVgMbKg9QAGvXJAOgVHkFSd4-qCvnJJ_CtAtzplElq0XmVhwWN4iFR-J-qhgE4nvR6BnlDnT_hX62nEXeSMODzv1eEOjcPCSXuzXQY5-OJ5wmIaez92uapFFaFTMcx-fSuGw5bdlHE" />
+            </div>
+            <h4 class="font-headline-md text-2xl text-primary">Đức Beard Specialist</h4>
+            <p class="font-label-caps text-[10px] tracking-widest text-on-surface-variant opacity-60">SENIOR BARBER
+              &amp; BEARD CRAFT</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Booking & Contact -->
+    <section class="py-24 px-12 max-w-screen-2xl mx-auto flex flex-col md:flex-row gap-20">
+      <div class="flex-1">
+        <h2 class="font-headline-md text-4xl mb-8">ĐẶT LỊCH HẸN</h2>
+        <form class="space-y-8">
+          <div class="grid grid-cols-2 gap-8">
+            <div class="relative">
+              <input
+                class="w-full bg-transparent border-0 border-b border-outline-variant py-4 focus:ring-0 focus:border-primary peer transition-all"
+                id="name" placeholder=" " type="text" />
+              <label
+                class="absolute left-0 top-4 font-label-caps text-on-surface-variant text-[10px] peer-placeholder-shown:text-base peer-placeholder-shown:top-4 peer-focus:-top-4 peer-focus:text-[10px] transition-all"
+                for="name">FULL NAME</label>
+            </div>
+            <div class="relative">
+              <input
+                class="w-full bg-transparent border-0 border-b border-outline-variant py-4 focus:ring-0 focus:border-primary peer transition-all"
+                id="phone" placeholder=" " type="tel" />
+              <label
+                class="absolute left-0 top-4 font-label-caps text-on-surface-variant text-[10px] peer-placeholder-shown:text-base peer-placeholder-shown:top-4 peer-focus:-top-4 peer-focus:text-[10px] transition-all"
+                for="phone">PHONE NUMBER</label>
+            </div>
+          </div>
+          <div class="relative">
+            <select
+              class="w-full bg-transparent border-0 border-b border-outline-variant py-4 focus:ring-0 focus:border-primary font-label-caps text-xs">
+              <option class="bg-background">SELECT SERVICE</option>
+              <option class="bg-background">CLASSIC CUT</option>
+              <option class="bg-background">SKIN FADE</option>
+              <option class="bg-background">PREMIUM PERM</option>
+            </select>
+          </div>
+          <div>
+            <p class="font-label-caps text-xs mb-4 text-primary tracking-widest">SELECT TIME SLOT</p>
+            <div class="grid grid-cols-4 md:grid-cols-6 gap-2">
+              <div class="p-3 border border-primary bg-primary text-on-primary text-center font-label-caps text-[10px]">
+                09:00</div>
+              <div
+                class="p-3 border border-outline-variant hover:border-primary transition-colors text-center font-label-caps text-[10px] cursor-pointer">
+                10:00</div>
+              <div
+                class="p-3 border border-outline-variant hover:border-primary transition-colors text-center font-label-caps text-[10px] cursor-pointer">
+                11:00</div>
+              <div
+                class="p-3 border border-outline-variant text-center font-label-caps text-[10px] opacity-30 slot-unavailable">
+                12:00</div>
+              <div
+                class="p-3 border border-outline-variant hover:border-primary transition-colors text-center font-label-caps text-[10px] cursor-pointer">
+                13:00</div>
+              <div
+                class="p-3 border border-outline-variant hover:border-primary transition-colors text-center font-label-caps text-[10px] cursor-pointer">
+                14:00</div>
+              <div
+                class="p-3 border border-outline-variant hover:border-primary transition-colors text-center font-label-caps text-[10px] cursor-pointer">
+                15:00</div>
+              <div
+                class="p-3 border border-outline-variant text-center font-label-caps text-[10px] opacity-30 slot-unavailable">
+                16:00</div>
+            </div>
+          </div>
+          <button
+            class="w-full bg-primary text-on-primary py-6 font-label-caps tracking-widest font-bold hover:bg-primary-fixed transition-colors">CONFIRM
+            APPOINTMENT</button>
+        </form>
+      </div>
+      <div class="flex-1 space-y-12">
+        <div class="h-80 w-full bg-surface-container grayscale overflow-hidden">
+          <img class="w-full h-full object-cover opacity-50"
+            data-alt="A stylized minimalist map of a luxury city district showing the barbershop's prime location with a gold marker"
+            data-location="Ho Chi Minh City"
+            src="https://lh3.googleusercontent.com/aida-public/AB6AXuB6TaQOZAuma92fFvec5Fd_fzDr0Q-VNKP-QRNHqyFW0-35-4lacg9LvHk3zdvLQBxxKb4W5Rr5acoS3hVZKwMWNzNYIVNC9UNcaWvgBZwP8bLpmIshsjcnCCsUc8m8YmrGbg7NjFxeyzOUFQucJkjdnpJM3TAdwVEEdMBNg5KbKwV33YkluwcYeFKhzYj88sjaHErulBp7m3VpoKEDnEQZpCUSBAF9LDUl1dx9x89SxnJFRe8HFKWjruNNsQWeR_R9_vPDkSlxp8E" />
+        </div>
+        <div class="grid grid-cols-2 gap-12">
+          <div>
+            <h5 class="font-headline-md text-lg text-primary mb-4">Location</h5>
+            <p class="text-on-surface-variant font-body-lg text-sm">
+              123 Đường Tôn Thất Tùng,<br />
+              Quận 1, TP. Hồ Chí Minh
+            </p>
+          </div>
+          <div>
+            <h5 class="font-headline-md text-lg text-primary mb-4">Hours</h5>
+            <p class="text-on-surface-variant font-body-lg text-sm">
+              Mon - Fri: 9:00 - 20:00<br />
+              Sat - Sun: 8:00 - 21:00
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <!-- Footer -->
+  <footer class="bg-[#0D0D0D] border-t-[1px] border-[#C5A059]/10 mt-20">
+    <div class="w-full py-16 px-12 grid grid-cols-1 md:grid-cols-3 gap-12 max-w-screen-2xl mx-auto">
+      <div class="flex flex-col gap-6">
+        <div class="text-lg font-semibold tracking-widest text-[#C5A059] font-headline-md">HIRO BARBERSHOP</div>
+        <p class="text-neutral-500 font-serif italic text-sm leading-relaxed max-w-xs">
+          Where tradition meets contemporary precision. Elevating the standard of male grooming since 2018.
+        </p>
+        <div class="flex gap-4">
+          <span
+            class="material-symbols-outlined text-primary/50 text-xl cursor-pointer hover:text-primary transition-colors">brand_awareness</span>
+          <span
+            class="material-symbols-outlined text-primary/50 text-xl cursor-pointer hover:text-primary transition-colors">public</span>
+          <span
+            class="material-symbols-outlined text-primary/50 text-xl cursor-pointer hover:text-primary transition-colors">mail</span>
+        </div>
+      </div>
+      <div class="flex flex-col gap-4">
+        <h6 class="font-label-caps text-xs text-on-surface tracking-widest border-b border-primary/20 pb-2 mb-4">QUICK
+          LINKS</h6>
+        <div class="grid grid-cols-1 gap-2">
+          <a class="text-neutral-500 uppercase tracking-widest text-[10px] hover:text-white transition-colors duration-200"
+            href="#">PRIVACY POLICY</a>
+          <a class="text-neutral-500 uppercase tracking-widest text-[10px] hover:text-white transition-colors duration-200"
+            href="#">TERMS OF SERVICE</a>
+          <a class="text-neutral-500 uppercase tracking-widest text-[10px] hover:text-white transition-colors duration-200"
+            href="#">CAREERS</a>
+          <a class="text-neutral-500 uppercase tracking-widest text-[10px] hover:text-white transition-colors duration-200"
+            href="#">CONTACT</a>
+        </div>
+      </div>
+      <div class="flex flex-col gap-4">
+        <h6 class="font-label-caps text-xs text-on-surface tracking-widest border-b border-primary/20 pb-2 mb-4">
+          NEWSLETTER</h6>
+        <p class="text-neutral-500 text-[10px] uppercase tracking-[0.2em] mb-4">Subscribe for exclusive grooming tips
+          and offers.</p>
+        <div class="flex border-b border-outline-variant">
+          <input
+            class="bg-transparent border-0 py-2 text-[10px] font-label-caps focus:ring-0 w-full placeholder:text-neutral-700"
+            placeholder="EMAIL ADDRESS" type="email" />
+          <button class="text-primary material-symbols-outlined">arrow_right_alt</button>
+        </div>
+      </div>
+    </div>
+    <div class="w-full py-8 px-12 border-t border-[#C5A059]/5 text-center">
+      <p class="text-neutral-500 uppercase tracking-widest text-[10px] font-body-lg">© 2026 HIRO BARBERSHOP.
+        TRADITION
+        REFINED.</p>
+    </div>
+  </footer>
+</body>
+
+</html>
