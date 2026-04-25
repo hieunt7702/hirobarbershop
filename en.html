@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en" class="scroll-smooth dark">
 
 <head>
@@ -798,14 +798,28 @@
     <script src="assets/js/main.js"></script>
 
     <!-- Video Modal -->
-    <div id="video-modal" class="fixed inset-0 z-[100] hidden bg-black/90 backdrop-blur-sm flex items-center justify-center p-4 lg:p-12 transition-all">
-        <button onclick="document.getElementById('video-modal').classList.add('hidden')" class="absolute top-6 right-6 text-white hover:text-primary transition-colors focus:outline-none">
+    <div id="video-modal" class="fixed inset-0 z-[100] hidden bg-black/90 backdrop-blur-sm flex items-center justify-center p-4 lg:p-12 transition-all"
+         onclick="if(event.target===this){closeVideoModal()}">
+        <button onclick="closeVideoModal()" class="absolute top-6 right-6 text-white hover:text-primary transition-colors focus:outline-none z-[101]">
             <span class="material-symbols-outlined text-4xl">close</span>
         </button>
         <div class="w-full max-w-5xl aspect-video rounded-lg overflow-hidden shadow-2xl border border-primary/20 bg-black">
-            <iframe class="w-full h-full" src="https://www.youtube.com/embed/S2H_k8B2T44" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            <video id="hiro-video" class="w-full h-full object-cover" src="assets/images/video.mp4"
+                   controls autoplay muted loop playsinline
+                   preload="none"
+                   poster="assets/images/hero.jpg">
+                Your browser does not support the video tag.
+            </video>
         </div>
-    </div>
+    <script>
+        function closeVideoModal() {
+            var modal = document.getElementById('video-modal');
+            var vid = document.getElementById('hiro-video');
+            modal.classList.add('hidden');
+            vid.pause();
+            vid.currentTime = 0;
+        }
+    </script>    </div>
 
     <!-- Lightbox Modal -->
     <div id="lightbox" class="fixed inset-0 z-[110] bg-black/95 hidden flex-col items-center justify-center opacity-0 transition-opacity duration-300">
