@@ -72,3 +72,107 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
 });
+
+// Lightbox logic
+const portfolioImages = [
+    "assets/images/portfolio-new-9.jpg",
+    "assets/images/portfolio-new-1.jpg",
+    "assets/images/portfolio-new-2.jpg",
+    "assets/images/portfolio-new-3.jpg",
+    "assets/images/portfolio-new-5.jpg",
+    "assets/images/portfolio-new-7.jpg",
+    "assets/images/portfolio-new-11.jpg",
+    "assets/images/portfolio-new-4.jpg",
+    "assets/images/portfolio-new-6.jpg",
+    "assets/images/portfolio-new-8.jpg",
+    "assets/images/portfolio-new-10.jpg",
+    "assets/images/portfolio-new-12.jpg"
+];
+let currentImageIndex = 0;
+
+function openLightbox(index) {
+    currentImageIndex = index;
+    const lightbox = document.getElementById('lightbox');
+    if (!lightbox) return;
+    updateLightboxImage();
+    lightbox.classList.remove('hidden');
+    lightbox.classList.add('flex');
+    setTimeout(() => lightbox.classList.remove('opacity-0'), 10);
+    document.body.style.overflow = 'hidden';
+}
+
+function closeLightbox() {
+    const lightbox = document.getElementById('lightbox');
+    if (!lightbox) return;
+    lightbox.classList.add('opacity-0');
+    setTimeout(() => {
+        lightbox.classList.add('hidden');
+        lightbox.classList.remove('flex');
+        document.body.style.overflow = '';
+    }, 300);
+}
+
+function nextImage(e) {
+    if(e) e.stopPropagation();
+    currentImageIndex = (currentImageIndex + 1) % portfolioImages.length;
+    updateLightboxImage();
+}
+
+function prevImage(e) {
+    if(e) e.stopPropagation();
+    currentImageIndex = (currentImageIndex - 1 + portfolioImages.length) % portfolioImages.length;
+    updateLightboxImage();
+}
+
+function updateLightboxImage() {
+    const lightboxImg = document.getElementById('lightbox-img');
+    const lightboxCounter = document.getElementById('lightbox-counter');
+    if (lightboxImg && lightboxCounter) {
+        lightboxImg.style.opacity = '0';
+        lightboxImg.style.transition = 'opacity 0.2s ease';
+        setTimeout(() => {
+            lightboxImg.src = portfolioImages[currentImageIndex];
+            lightboxImg.onload = () => {
+                lightboxImg.style.opacity = '1';
+            };
+            // In case image is cached and onload doesn't fire
+            if (lightboxImg.complete) lightboxImg.style.opacity = '1';
+        }, 150);
+        lightboxCounter.textContent = `${currentImageIndex + 1} / ${portfolioImages.length}`;
+    }
+}
+
+// Keyboard navigation for lightbox
+document.addEventListener('keydown', (e) => {
+    const lightbox = document.getElementById('lightbox');
+    if (!lightbox || lightbox.classList.contains('hidden')) return;
+    if (e.key === 'Escape') closeLightbox();
+    if (e.key === 'ArrowRight') nextImage(null);
+    if (e.key === 'ArrowLeft') prevImage(null);
+});
+
+// Touch/swipe support for lightbox
+let touchStartX = 0;
+document.addEventListener('touchstart', (e) => {
+    const lightbox = document.getElementById('lightbox');
+    if (!lightbox || lightbox.classList.contains('hidden')) return;
+    touchStartX = e.changedTouches[0].screenX;
+}, { passive: true });
+document.addEventListener('touchend', (e) => {
+    const lightbox = document.getElementById('lightbox');
+    if (!lightbox || lightbox.classList.contains('hidden')) return;
+    const dx = e.changedTouches[0].screenX - touchStartX;
+    if (Math.abs(dx) > 50) {
+        dx < 0 ? nextImage(null) : prevImage(null);
+    }
+}, { passive: true });
+
+// Preload adjacent images for smooth navigation
+function preloadAdjacentImages() {
+    const prev = (currentImageIndex - 1 + portfolioImages.length) % portfolioImages.length;
+    const next = (currentImageIndex + 1) % portfolioImages.length;
+    [prev, next].forEach(i => {
+        const img = new Image();
+        img.src = portfolioImages[i];
+    });
+}

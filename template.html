@@ -1,13 +1,13 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth dark">
+<html lang="{{html_lang}}" class="scroll-smooth dark">
 
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- Primary SEO -->
-    <title>Hiro Barbershop Prague | Premium Mens Barbershop Vyšehrad</title>
-    <meta name="description" content="Hiro Barbershop – premium mens barbershop in Prague Vyšehrad. Expert skin fades, classic cuts and beard grooming. Book online now.">
+    <title>{{meta_title}}</title>
+    <meta name="description" content="{{meta_description}}">
     <meta name="keywords" content="barbershop Praha, barbershop Vyšehrad, pánský střih Praha, skin fade Praha, fade haircut Prague, Hiro Barbershop, barbershop Czech Republic, men's haircut Prague">
     <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
     <meta name="author" content="Hiro Barbershop">
@@ -17,7 +17,7 @@
     <meta name="ICBM" content="50.0680504, 14.4208115">
 
     <!-- Canonical & Hreflang -->
-    <link rel="canonical" href="https://hirobarbershop.cz/en.html">
+    <link rel="canonical" href="{{canonical_url}}">
     <link rel="alternate" hreflang="vi" href="https://hirobarbershop.cz/vi.html">
     <link rel="alternate" hreflang="en" href="https://hirobarbershop.cz/en.html">
     <link rel="alternate" hreflang="cs" href="https://hirobarbershop.cz/">
@@ -33,10 +33,10 @@
     <!-- Open Graph -->
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="Hiro Barbershop">
-    <meta property="og:locale" content="en_US">
-    <meta property="og:url" content="https://hirobarbershop.cz/en.html">
-    <meta property="og:title" content="Hiro Barbershop Prague | Premium Mens Barbershop Vyšehrad">
-    <meta property="og:description" content="Hiro Barbershop – premium mens barbershop in Prague Vyšehrad. Expert skin fades, classic cuts and beard grooming. Book online now.">
+    <meta property="og:locale" content="{{og_locale}}">
+    <meta property="og:url" content="{{canonical_url}}">
+    <meta property="og:title" content="{{meta_title}}">
+    <meta property="og:description" content="{{meta_description}}">
     <meta property="og:image" content="https://hirobarbershop.cz/assets/images/hero.jpg">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
@@ -44,8 +44,8 @@
 
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Hiro Barbershop Prague | Premium Mens Barbershop Vyšehrad">
-    <meta name="twitter:description" content="Hiro Barbershop – premium mens barbershop in Prague Vyšehrad. Expert skin fades, classic cuts and beard grooming. Book online now.">
+    <meta name="twitter:title" content="{{meta_title}}">
+    <meta name="twitter:description" content="{{meta_description}}">
     <meta name="twitter:image" content="https://hirobarbershop.cz/assets/images/hero.jpg">
 
     <!-- Schema: LocalBusiness / Barbershop -->
@@ -179,13 +179,13 @@
             <!-- Desktop Nav -->
             <nav class="hidden lg:flex gap-12 items-center" aria-label="Main Navigation">
                 <a class="nav-link text-primary border-primary font-medium tracking-widest text-[10px] hover:text-primary transition-colors duration-300 font-label-caps outline-none focus-visible:ring-2 focus-visible:ring-primary pb-1 border-b"
-                    href="#services">SERVICES</a>
+                    href="#services">{{services_1}}</a>
                 <a class="nav-link text-neutral-400 border-transparent font-medium tracking-widest text-[10px] hover:text-primary transition-colors duration-300 font-label-caps outline-none focus-visible:ring-2 focus-visible:ring-primary pb-1 border-b"
-                    href="#portfolio">GALLERY</a>
+                    href="#portfolio">{{gallery_1}}</a>
                 <a class="nav-link text-neutral-400 border-transparent font-medium tracking-widest text-[10px] hover:text-primary transition-colors duration-300 font-label-caps outline-none focus-visible:ring-2 focus-visible:ring-primary pb-1 border-b"
-                    href="#team">TEAM</a>
+                    href="#team">{{team_1}}</a>
                 <a class="nav-link text-neutral-400 border-transparent font-medium tracking-widest text-[10px] hover:text-primary transition-colors duration-300 font-label-caps outline-none focus-visible:ring-2 focus-visible:ring-primary pb-1 border-b"
-                    href="https://hirobarbershop.setmore.com/" target="_blank">BOOKING</a>
+                    href="https://hirobarbershop.setmore.com/" target="_blank">{{booking}}</a>
             </nav>
 
             <!-- CTA & Mobile Toggle -->
@@ -196,8 +196,8 @@
                 <div class="relative group flex items-center">
                     <button
                         class="flex items-center gap-1.5 lg:gap-2 px-2 py-1 lg:px-3 lg:py-1.5 border border-outline-variant/50 rounded-full bg-surface-container/50 text-on-surface-variant hover:text-primary hover:border-primary/50 transition-all focus:outline-none focus:ring-2 focus:ring-primary/50">
-                        <img id="current-flag" src="https://flagcdn.com/w20/gb.png" alt="EN" class="w-4 h-3 rounded-sm object-cover">
-                        <span id="current-lang" class="text-[10px] lg:text-xs font-label-caps tracking-widest font-medium">EN</span>
+                        {{img_id_current_flag_src_https_}}
+                        <span id="current-lang" class="text-[10px] lg:text-xs font-label-caps tracking-widest font-medium">VI</span>
                         <span
                             class="material-symbols-outlined text-[14px] lg:text-[16px] opacity-70 group-hover:opacity-100 transition-opacity">expand_more</span>
                     </button>
@@ -206,33 +206,33 @@
                         <a href="index.html"
                             class="flex items-center gap-3 px-4 py-3 text-sm text-on-surface-variant hover:text-primary hover:bg-primary/20 transition-colors font-label-caps whitespace-nowrap">
                             <img src="https://flagcdn.com/w20/cz.png" alt="CS" class="w-4 h-3 rounded-sm object-cover">
-                            Czech
+                            {{czech}}
                         </a>
                         <a href="vi.html"
-                            class="flex items-center gap-3 px-4 py-3 text-sm text-on-surface-variant hover:text-primary hover:bg-primary/20 transition-colors font-label-caps whitespace-nowrap">
+                            class="flex items-center gap-3 px-4 py-3 text-sm text-primary bg-primary/10 hover:text-primary hover:bg-primary/20 transition-colors font-label-caps whitespace-nowrap">
                             <img src="https://flagcdn.com/w20/vn.png" alt="VI" class="w-4 h-3 rounded-sm object-cover">
-                            Vietnamese
+                            {{vietnamese}}
                         </a>
                         <a href="en.html"
-                            class="flex items-center gap-3 px-4 py-3 text-sm text-primary bg-primary/10 hover:text-primary hover:bg-primary/20 transition-colors font-label-caps whitespace-nowrap">
+                            class="flex items-center gap-3 px-4 py-3 text-sm text-on-surface-variant hover:text-primary hover:bg-primary/20 transition-colors font-label-caps whitespace-nowrap">
                             <img src="https://flagcdn.com/w20/gb.png" alt="EN" class="w-4 h-3 rounded-sm object-cover">
-                            English
+                            {{english}}
                         </a>
                         <a href="de.html"
                             class="flex items-center gap-3 px-4 py-3 text-sm text-on-surface-variant hover:text-primary hover:bg-primary/20 transition-colors font-label-caps whitespace-nowrap">
                             <img src="https://flagcdn.com/w20/de.png" alt="DE" class="w-4 h-3 rounded-sm object-cover">
-                            German
+                            {{german}}
                         </a>
                         <a href="es.html"
                             class="flex items-center gap-3 px-4 py-3 text-sm text-on-surface-variant hover:text-primary hover:bg-primary/20 transition-colors font-label-caps whitespace-nowrap">
                             <img src="https://flagcdn.com/w20/es.png" alt="ES" class="w-4 h-3 rounded-sm object-cover">
-                            Spanish
+                            {{spanish}}
                         </a>
                     </div>
                 </div>
 
                 <a href="https://hirobarbershop.setmore.com/" target="_blank"
-                    class="hidden sm:inline-block bg-primary-container text-on-primary-fixed-variant px-6 py-2.5 font-label-caps text-[10px] tracking-widest font-bold hover:bg-primary transition-colors duration-300 outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-primary focus-visible:ring-offset-background rounded">BOOK NOW</a>
+                    class="hidden sm:inline-block bg-primary-container text-on-primary-fixed-variant px-6 py-2.5 font-label-caps text-[10px] tracking-widest font-bold hover:bg-primary transition-colors duration-300 outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-primary focus-visible:ring-offset-background rounded">{{book_now}}</a>
                 <!-- Mobile Menu Button -->
                 <button id="mobile-menu-btn" onclick="toggleMobileMenu()"
                     class="lg:hidden text-primary p-2 focus:outline-none focus:ring-2 focus:ring-primary rounded z-[60] relative"
@@ -249,13 +249,13 @@
         <div class="flex flex-col items-center justify-center h-full gap-8">
 
             <a class="text-2xl font-headline-md text-on-surface-variant hover:text-primary transition-colors tracking-widest font-label-caps uppercase"
-                href="#services" onclick="toggleMobileMenu()">SERVICES</a>
+                href="#services" onclick="toggleMobileMenu()">{{services_1}}</a>
             <a class="text-2xl font-headline-md text-on-surface-variant hover:text-primary transition-colors tracking-widest font-label-caps uppercase"
-                href="#portfolio" onclick="toggleMobileMenu()">GALLERY</a>
+                href="#portfolio" onclick="toggleMobileMenu()">{{gallery_1}}</a>
             <a class="text-2xl font-headline-md text-on-surface-variant hover:text-primary transition-colors tracking-widest font-label-caps uppercase"
-                href="#team" onclick="toggleMobileMenu()">TEAM</a>
+                href="#team" onclick="toggleMobileMenu()">{{team_1}}</a>
             <a class="text-2xl font-headline-md text-on-surface-variant hover:text-primary transition-colors tracking-widest font-label-caps uppercase"
-                href="https://hirobarbershop.setmore.com/" target="_blank" onclick="toggleMobileMenu()">BOOKING</a>
+                href="https://hirobarbershop.setmore.com/" target="_blank" onclick="toggleMobileMenu()">{{booking}}</a>
         </div>
     </div>
 
@@ -266,25 +266,25 @@
         <section class="relative min-h-[90vh] flex items-center px-6 lg:px-12 max-w-screen-2xl mx-auto overflow-hidden">
             <div class="z-10 max-w-3xl py-20">
                 <span
-                    class="font-label-caps text-primary mb-6 block tracking-[0.4em] text-sm font-semibold uppercase animate-fade-in-up">EXQUISITE TRADITION.</span>
+                    class="font-label-caps text-primary mb-6 block tracking-[0.4em] text-sm font-semibold uppercase animate-fade-in-up">{{exquisite_tradition}}</span>
                 <h1
                     class="font-display-lg text-4xl sm:text-5xl lg:text-7xl text-on-background mb-8 leading-[1.1] animate-fade-in-up">
-                    Modern men's grooming excellence <br class="hidden sm:block" />
-                    <span class="text-primary italic">Perfect fade</span> – dedicated service
+                    {{modern_men_s_grooming_excellen}} <br class="hidden sm:block" />
+                    <span class="text-primary italic">{{perfect_fade}}</span> – {{dedicated_service}}
                 </h1>
                 <p class="text-on-surface-variant font-body-lg text-lg mb-10 max-w-xl opacity-90">
-                    Experience premium men's grooming in the heart of Prague. Where artisans craft the elegant demeanor for every gentleman.
+                    {{hero_subtext}}
                 </p>
                 <div class="flex flex-col sm:flex-row gap-6 items-start sm:items-center">
                     <a href="https://hirobarbershop.setmore.com/" target="_blank"
                         class="bg-primary text-on-primary px-10 py-4 font-label-caps tracking-widest font-bold hover:bg-primary-fixed transition-colors duration-300 text-center w-full sm:w-auto outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-primary focus-visible:ring-offset-background rounded">
-                        BOOK NOW
+                        {{book_now}}
                     </a>
                     <button onclick="document.getElementById('video-modal').classList.remove('hidden')"
                         class="flex items-center justify-center gap-3 text-on-surface-variant hover:text-primary transition-colors duration-300 font-label-caps w-full sm:w-auto py-4 group outline-none focus-visible:ring-2 focus-visible:ring-primary rounded">
                         <span
                             class="material-symbols-outlined text-primary text-3xl group-hover:scale-110 transition-transform">play_circle</span>
-                        WATCH EXPERIENCE
+                        {{watch_experience}}
                     </button>
                 </div>
 
@@ -310,13 +310,13 @@
                                 <span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
                                 <span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
                             </div>
-                            <span><strong class="text-on-background text-base">4.9/5</strong> <span class="mx-1 opacity-50">&bull;</span> <span class="group-hover:text-primary transition-colors">2,110 reviews</span></span>
+                            <span><strong class="text-on-background text-base">4.9/5</strong> <span class="mx-1 opacity-50">&bull;</span> <span class="group-hover:text-primary transition-colors">{{google_reviews}}</span></span>
                         </div>
                     </div>
                     
                     <div class="flex items-center gap-2 bg-background/50 border border-primary/20 px-4 py-2 rounded-full relative z-10 group-hover:bg-primary/10 transition-colors">
                         <span class="material-symbols-outlined text-primary text-[20px]">workspace_premium</span>
-                        <span class="text-xs font-label-caps tracking-wider text-on-surface uppercase">Top 1 selected by Google</span>
+                        <span class="text-xs font-label-caps tracking-wider text-on-surface uppercase">{{top_1_google}}</span>
                     </div>
                 </a>
             </div>
@@ -331,7 +331,7 @@
 
         <!-- Why Choose Us -->
         <section class="py-20 lg:py-28 px-6 lg:px-12 max-w-screen-2xl mx-auto border-t border-primary/10">
-            <h2 class="sr-only">Why choose Hiro Barbershop</h2>
+            <h2 class="sr-only">{{why_choose_hiro_barbershop}}</h2>
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-8">
                 <!-- Feature 1 -->
                 <article class="reveal flex flex-col items-center text-center space-y-5 group">
@@ -341,8 +341,8 @@
                             class="material-symbols-outlined text-primary -rotate-45 text-3xl group-hover:scale-110 transition-transform duration-500"
                             style="font-variation-settings: 'FILL' 1;">content_cut</span>
                     </div>
-                    <h3 class="font-headline-md text-xl text-on-background">PROFESSIONAL</h3>
-                    <p class="text-on-surface-variant text-sm font-body-lg leading-relaxed max-w-xs">Every cut is performed by top artisans, ensuring absolute precision.</p>
+                    <h3 class="font-headline-md text-xl text-on-background">{{professional}}</h3>
+                    <p class="text-on-surface-variant text-sm font-body-lg leading-relaxed max-w-xs">{{professional_desc}}</p>
                 </article>
                 <!-- Feature 2 -->
                 <article class="reveal reveal-delay-100 flex flex-col items-center text-center space-y-5 group">
@@ -352,7 +352,7 @@
                             class="material-symbols-outlined text-primary -rotate-45 text-3xl group-hover:scale-110 transition-transform duration-500"
                             style="font-variation-settings: 'FILL' 1;">schedule</span>
                     </div>
-                    <h3 class="font-headline-md text-xl text-on-background">ON TIME</h3>
+                    <h3 class="font-headline-md text-xl text-on-background">{{on_time}}</h3>
                     <p class="text-on-surface-variant text-sm font-body-lg leading-relaxed max-w-xs">Sự tôn trọng thời
                         gian của quý ông là ưu tiên tuyệt đối. Đặt lịch là làm ngay.</p>
                 </article>
@@ -364,8 +364,8 @@
                             class="material-symbols-outlined text-primary -rotate-45 text-3xl group-hover:scale-110 transition-transform duration-500"
                             style="font-variation-settings: 'FILL' 1;">local_fire_department</span>
                     </div>
-                    <h3 class="font-headline-md text-xl text-on-background">STYLE</h3>
-                    <p class="text-on-surface-variant text-sm font-body-lg leading-relaxed max-w-xs">Always updated with the latest men's hair trends, tailored to your face shape.</p>
+                    <h3 class="font-headline-md text-xl text-on-background">{{style}}</h3>
+                    <p class="text-on-surface-variant text-sm font-body-lg leading-relaxed max-w-xs">{{style_desc}}</p>
                 </article>
                 <!-- Feature 4 -->
                 <article class="reveal reveal-delay-300 flex flex-col items-center text-center space-y-5 group">
@@ -375,8 +375,8 @@
                             class="material-symbols-outlined text-primary -rotate-45 text-3xl group-hover:scale-110 transition-transform duration-500"
                             style="font-variation-settings: 'FILL' 1;">dry_cleaning</span>
                     </div>
-                    <h3 class="font-headline-md text-xl text-on-background">VIP SERVICE</h3>
-                    <p class="text-on-surface-variant text-sm font-body-lg leading-relaxed max-w-xs">Private, relaxing atmosphere. Free soft drinks in our refrigerator (self-service). Free tea and coffee (upon request).</p>
+                    <h3 class="font-headline-md text-xl text-on-background">{{vip_service}}</h3>
+                    <p class="text-on-surface-variant text-sm font-body-lg leading-relaxed max-w-xs">{{private_relaxing_atmosphere_fr}}</p>
                 </article>
             </div>
         </section>
@@ -387,13 +387,13 @@
                 <div class="flex flex-col lg:flex-row justify-between items-start lg:items-end mb-16 gap-6 reveal">
                     <div>
                         <span
-                            class="font-label-caps text-primary tracking-widest block mb-3 uppercase font-semibold">Price List</span>
+                            class="font-label-caps text-primary tracking-widest block mb-3 uppercase font-semibold">{{price_list}}</span>
                         <h2
                             class="font-headline-md text-3xl lg:text-4xl relative pb-4 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-16 after:h-[2px] after:bg-primary uppercase">
-                            PREMIUM SERVICES</h2>
+                            {{premium_services}}</h2>
                     </div>
                     <p class="max-w-md text-on-surface-variant font-body-lg italic opacity-80 leading-relaxed">
-                        We don't just cut hair; we craft the demeanor of a modern gentleman through refined techniques.
+                        {{we_don_t_just_cut_hair_we_craf}}
                     </p>
                 </div>
 
@@ -407,128 +407,128 @@
                                 <span class="material-symbols-outlined text-[200px]" style="font-variation-settings: 'FILL' 1;">content_cut</span>
                             </div>
                             
-                            <h3 class="font-headline-md text-2xl text-center text-primary mb-8 uppercase tracking-widest leading-relaxed">BECOME A MEMBER FOR HUGE DISCOUNTS</h3>
+                            <h3 class="font-headline-md text-2xl text-center text-primary mb-8 uppercase tracking-widest leading-relaxed">{{become_a_member_for_huge_disco}}</h3>
                             
                             <ul class="space-y-6 mb-8 relative z-10">
                                 <li class="flex justify-between items-center border-b border-outline-variant/20 pb-4">
                                     <div class="flex items-center gap-3">
                                         <span class="material-symbols-outlined text-primary text-xl" style="font-variation-settings: 'FILL' 1;">star</span>
-                                        <span class="font-label-caps tracking-widest text-sm text-on-background">Birthday:</span>
+                                        <span class="font-label-caps tracking-widest text-sm text-on-background">{{birthday}}</span>
                                     </div>
                                     <span class="bg-primary text-on-primary font-headline-md text-lg px-3 py-1 rounded-sm">-30%</span>
                                 </li>
                                 <li class="flex justify-between items-center border-b border-outline-variant/20 pb-4">
                                     <div class="flex items-center gap-3">
                                         <span class="material-symbols-outlined text-primary text-xl" style="font-variation-settings: 'FILL' 1;">star</span>
-                                        <span class="font-label-caps tracking-widest text-sm text-on-background">Father and Son:</span>
+                                        <span class="font-label-caps tracking-widest text-sm text-on-background">{{father_and_son}}</span>
                                     </div>
                                     <span class="bg-primary text-on-primary font-headline-md text-lg px-3 py-1 rounded-sm">-15%</span>
                                 </li>
                                 <li class="flex justify-between items-center border-b border-outline-variant/20 pb-4">
                                     <div class="flex items-center gap-3">
                                         <span class="material-symbols-outlined text-primary text-xl" style="font-variation-settings: 'FILL' 1;">star</span>
-                                        <span class="font-label-caps tracking-widest text-sm text-on-background">Haircut every 2 weeks:</span>
+                                        <span class="font-label-caps tracking-widest text-sm text-on-background">{{haircut_every_2_weeks}}</span>
                                     </div>
                                     <span class="bg-primary text-on-primary font-headline-md text-lg px-3 py-1 rounded-sm">-15%</span>
                                 </li>
                                 <li class="flex items-center gap-3 pt-2">
                                     <span class="material-symbols-outlined text-primary text-xl" style="font-variation-settings: 'FILL' 1;">loyalty</span>
-                                    <span class="font-label-caps tracking-widest text-sm text-on-background leading-relaxed">Collect 3 points, get 1 discount</span>
+                                    <span class="font-label-caps tracking-widest text-sm text-on-background leading-relaxed">{{collect_3_points_get_1_discoun}}</span>
                                 </li>
                             </ul>
                             
                             <!-- Special Offer Box -->
                             <div class="bg-gradient-to-br from-primary/20 to-primary/5 border border-primary p-6 rounded-sm text-center relative z-10 mt-10 shadow-[0_0_30px_rgba(197,160,89,0.15)]">
-                                <span class="font-headline-md text-primary text-lg block mb-2 tracking-widest uppercase">SPECIAL OFFER:</span>
-                                <p class="text-sm font-body-lg text-on-background mb-4">When referring friends and family, both get a discount</p>
+                                <span class="font-headline-md text-primary text-lg block mb-2 tracking-widest uppercase">{{special_offer}}</span>
+                                <p class="text-sm font-body-lg text-on-background mb-4">{{when_referring_friends_and_fam}}</p>
                                 <div class="font-display-lg text-5xl text-primary mb-4 drop-shadow-[0_2px_4px_rgba(0,0,0,0.5)]">30%</div>
-                                <p class="text-[10px] font-label-caps text-on-surface-variant uppercase tracking-widest opacity-80">Applies to members with more than 3 visits</p>
+                                <p class="text-[10px] font-label-caps text-on-surface-variant uppercase tracking-widest opacity-80">{{applies_to_members_with_more_t}}</p>
                             </div>
                         </div>
                     </div>
                     
                     <!-- Price List -->
                     <div class="lg:col-span-7 xl:col-span-8 reveal reveal-right flex flex-col gap-6">
-                        <h3 class="font-headline-md text-2xl mb-2 tracking-widest uppercase text-on-background border-b border-primary/20 pb-4 inline-block">SERVICE PRICE LIST</h3>
+                        <h3 class="font-headline-md text-2xl mb-2 tracking-widest uppercase text-on-background border-b border-primary/20 pb-4 inline-block">{{service_price_list}}</h3>
                         <div class="flex flex-col gap-6 mt-2">
 
                             <!-- Item 1 -->
                             <div class="reveal  flex flex-col sm:flex-row justify-between items-start sm:items-end border-b border-outline-variant/30 pb-4 group hover:border-primary/50 transition-colors">
                                 <div class="pr-4 flex-1 mb-2 sm:mb-0">
-                                    <h4 class="font-headline-md text-lg text-on-background group-hover:text-primary transition-colors">Men's Haircut</h4>
-                                    <p class="text-xs text-on-surface-variant font-label-caps italic mt-1 opacity-80">Basic haircut</p>
+                                    <h4 class="font-headline-md text-lg text-on-background group-hover:text-primary transition-colors">{{men_s_haircut}}</h4>
+                                    <p class="text-xs text-on-surface-variant font-label-caps italic mt-1 opacity-80">{{basic_haircut}}</p>
                                 </div>
                                 <div class="font-headline-md text-xl lg:text-2xl text-primary whitespace-nowrap">499 CZK</div>
                             </div>
                             <!-- Item 2 -->
                             <div class="reveal reveal-delay-50 flex flex-col sm:flex-row justify-between items-start sm:items-end border-b border-outline-variant/30 pb-4 group hover:border-primary/50 transition-colors">
                                 <div class="pr-4 flex-1 mb-2 sm:mb-0">
-                                    <h4 class="font-headline-md text-lg text-on-background group-hover:text-primary transition-colors">Long hair - Or scissors only</h4>
-                                    <p class="text-xs text-on-surface-variant font-label-caps italic mt-1 opacity-80">For long hair</p>
+                                    <h4 class="font-headline-md text-lg text-on-background group-hover:text-primary transition-colors">{{long_hair_or_scissors_only}}</h4>
+                                    <p class="text-xs text-on-surface-variant font-label-caps italic mt-1 opacity-80">{{for_long_hair}}</p>
                                 </div>
                                 <div class="font-headline-md text-xl lg:text-2xl text-primary whitespace-nowrap">569 CZK</div>
                             </div>
                             <!-- Item 3 -->
                             <div class="reveal reveal-delay-100 flex flex-col sm:flex-row justify-between items-start sm:items-end border-b border-outline-variant/30 pb-4 group hover:border-primary/50 transition-colors">
                                 <div class="pr-4 flex-1 mb-2 sm:mb-0">
-                                    <h4 class="font-headline-md text-lg text-on-background group-hover:text-primary transition-colors">Haircut & Full Shave (-15%)</h4>
-                                    <p class="text-xs text-on-surface-variant font-label-caps italic mt-1 opacity-80">Perfect combo</p>
+                                    <h4 class="font-headline-md text-lg text-on-background group-hover:text-primary transition-colors">{{haircut_full_shave_15}}</h4>
+                                    <p class="text-xs text-on-surface-variant font-label-caps italic mt-1 opacity-80">{{perfect_combo}}</p>
                                 </div>
                                 <div class="font-headline-md text-xl lg:text-2xl text-primary whitespace-nowrap">739 CZK</div>
                             </div>
                             <!-- Item 4 -->
                             <div class="reveal reveal-delay-150 flex flex-col sm:flex-row justify-between items-start sm:items-end border-b border-outline-variant/30 pb-4 group hover:border-primary/50 transition-colors">
                                 <div class="pr-4 flex-1 mb-2 sm:mb-0">
-                                    <h4 class="font-headline-md text-lg text-on-background group-hover:text-primary transition-colors">Haircut & Beard Trim</h4>
-                                    <p class="text-xs text-on-surface-variant font-label-caps italic mt-1 opacity-80">Absolute neatness</p>
+                                    <h4 class="font-headline-md text-lg text-on-background group-hover:text-primary transition-colors">{{haircut_beard_trim}}</h4>
+                                    <p class="text-xs text-on-surface-variant font-label-caps italic mt-1 opacity-80">{{absolute_neatness}}</p>
                                 </div>
                                 <div class="font-headline-md text-xl lg:text-2xl text-primary whitespace-nowrap">599 CZK</div>
                             </div>
                             <!-- Item 5 -->
                             <div class="reveal reveal-delay-200 flex flex-col sm:flex-row justify-between items-start sm:items-end border-b border-outline-variant/30 pb-4 group hover:border-primary/50 transition-colors">
                                 <div class="pr-4 flex-1 mb-2 sm:mb-0">
-                                    <h4 class="font-headline-md text-lg text-on-background group-hover:text-primary transition-colors">Classic Shave</h4>
-                                    <p class="text-xs text-on-surface-variant font-label-caps italic mt-1 opacity-80">Traditional shave</p>
+                                    <h4 class="font-headline-md text-lg text-on-background group-hover:text-primary transition-colors">{{classic_shave}}</h4>
+                                    <p class="text-xs text-on-surface-variant font-label-caps italic mt-1 opacity-80">{{traditional_shave}}</p>
                                 </div>
                                 <div class="font-headline-md text-xl lg:text-2xl text-primary whitespace-nowrap">369 CZK</div>
                             </div>
                             <!-- Item 6 -->
                             <div class="reveal reveal-delay-250 flex flex-col sm:flex-row justify-between items-start sm:items-end border-b border-outline-variant/30 pb-4 group hover:border-primary/50 transition-colors">
                                 <div class="pr-4 flex-1 mb-2 sm:mb-0">
-                                    <h4 class="font-headline-md text-lg text-on-background group-hover:text-primary transition-colors">Beard Dye</h4>
-                                    <p class="text-xs text-on-surface-variant font-label-caps italic mt-1 opacity-80">Beard Dye tự nhiên</p>
+                                    <h4 class="font-headline-md text-lg text-on-background group-hover:text-primary transition-colors">{{beard_dye}}</h4>
+                                    <p class="text-xs text-on-surface-variant font-label-caps italic mt-1 opacity-80">{{beard_dye}} tự nhiên</p>
                                 </div>
                                 <div class="font-headline-md text-xl lg:text-2xl text-primary whitespace-nowrap">499 CZK</div>
                             </div>
                             <!-- Item 7 -->
                             <div class="reveal reveal-delay-300 flex flex-col sm:flex-row justify-between items-start sm:items-end border-b border-outline-variant/30 pb-4 group hover:border-primary/50 transition-colors">
                                 <div class="pr-4 flex-1 mb-2 sm:mb-0">
-                                    <h4 class="font-headline-md text-lg text-on-background group-hover:text-primary transition-colors">Head Shave & Beard</h4>
-                                    <p class="text-xs text-on-surface-variant font-label-caps italic mt-1 opacity-80">Masculine style</p>
+                                    <h4 class="font-headline-md text-lg text-on-background group-hover:text-primary transition-colors">{{head_shave_beard}}</h4>
+                                    <p class="text-xs text-on-surface-variant font-label-caps italic mt-1 opacity-80">{{masculine_style}}</p>
                                 </div>
                                 <div class="font-headline-md text-xl lg:text-2xl text-primary whitespace-nowrap">549 CZK</div>
                             </div>
                             <!-- Item 8 -->
                             <div class="reveal reveal-delay-350 flex flex-col sm:flex-row justify-between items-start sm:items-end border-b border-outline-variant/30 pb-4 group hover:border-primary/50 transition-colors">
                                 <div class="pr-4 flex-1 mb-2 sm:mb-0">
-                                    <h4 class="font-headline-md text-lg text-on-background group-hover:text-primary transition-colors">Perm</h4>
-                                    <p class="text-xs text-on-surface-variant font-label-caps italic mt-1 opacity-80">Voluminous perm</p>
+                                    <h4 class="font-headline-md text-lg text-on-background group-hover:text-primary transition-colors">{{perm}}</h4>
+                                    <p class="text-xs text-on-surface-variant font-label-caps italic mt-1 opacity-80">{{voluminous_perm}}</p>
                                 </div>
                                 <div class="font-headline-md text-xl lg:text-2xl text-primary whitespace-nowrap">1499 CZK</div>
                             </div>
                             <!-- Item 9 -->
                             <div class="reveal reveal-delay-400 flex flex-col sm:flex-row justify-between items-start sm:items-end border-b border-outline-variant/30 pb-4 group hover:border-primary/50 transition-colors">
                                 <div class="pr-4 flex-1 mb-2 sm:mb-0">
-                                    <h4 class="font-headline-md text-lg text-on-background group-hover:text-primary transition-colors">Haircut every 2 weeks (-15%)</h4>
-                                    <p class="text-xs text-on-surface-variant font-label-caps italic mt-1 opacity-80">Maintain style</p>
+                                    <h4 class="font-headline-md text-lg text-on-background group-hover:text-primary transition-colors">{{haircut_every_2_weeks_15}}</h4>
+                                    <p class="text-xs text-on-surface-variant font-label-caps italic mt-1 opacity-80">{{maintain_style}}</p>
                                 </div>
                                 <div class="font-headline-md text-xl lg:text-2xl text-primary whitespace-nowrap">419 CZK</div>
                             </div>
                             <!-- Item 10 -->
                             <div class="reveal reveal-delay-450 flex flex-col sm:flex-row justify-between items-start sm:items-end border-b border-outline-variant/30 pb-4 group hover:border-primary/50 transition-colors">
                                 <div class="pr-4 flex-1 mb-2 sm:mb-0">
-                                    <h4 class="font-headline-md text-lg text-on-background group-hover:text-primary transition-colors">Student Haircut (under 24) (-15%)</h4>
-                                    <p class="text-xs text-on-surface-variant font-label-caps italic mt-1 opacity-80">For students</p>
+                                    <h4 class="font-headline-md text-lg text-on-background group-hover:text-primary transition-colors">{{student_haircut_under_24_15}}</h4>
+                                    <p class="text-xs text-on-surface-variant font-label-caps italic mt-1 opacity-80">{{for_students}}</p>
                                 </div>
                                 <div class="font-headline-md text-xl lg:text-2xl text-primary whitespace-nowrap">419 CZK</div>
                             </div>
@@ -541,8 +541,8 @@
         <!-- Portfolio (Gallery) -->
         <section id="portfolio" class="py-20 lg:py-28 px-6 lg:px-12 max-w-screen-2xl mx-auto scroll-mt-20">
             <div class="text-center mb-16 reveal">
-                <span class="font-label-caps text-primary tracking-[0.3em] uppercase block mb-4 text-sm">Gallery</span>
-                <h2 class="font-headline-md text-3xl lg:text-4xl text-on-background">OUR MASTERPIECES</h2>
+                <span class="font-label-caps text-primary tracking-[0.3em] uppercase block mb-4 text-sm">{{gallery}}</span>
+                <h2 class="font-headline-md text-3xl lg:text-4xl text-on-background">{{our_masterpieces}}</h2>
             </div>
 
             <!-- Row 1: Full-width hero banner -->
@@ -597,9 +597,9 @@
         <section id="team" class="py-20 lg:py-28 bg-[#0e0e0e] scroll-mt-20">
             <div class="max-w-screen-2xl mx-auto px-6 lg:px-12">
                 <div class="text-center mb-16 reveal">
-                    <span class="font-label-caps text-primary tracking-[0.3em] uppercase block mb-4 text-sm">Our Artists</span>
-                    <h2 class="font-headline-md text-3xl lg:text-4xl uppercase text-on-background">MASTER BARBERS</h2>
-                    <p class="mt-4 text-on-surface-variant max-w-xl mx-auto text-sm lg:text-base">The golden hands behind masterpiece hairstyles. Our team continuously trains and updates trends.</p>
+                    <span class="font-label-caps text-primary tracking-[0.3em] uppercase block mb-4 text-sm">{{our_artists}}</span>
+                    <h2 class="font-headline-md text-3xl lg:text-4xl uppercase text-on-background">{{master_barbers}}</h2>
+                    <p class="mt-4 text-on-surface-variant max-w-xl mx-auto text-sm lg:text-base">{{team_desc}}</p>
                 </div>
 
                 <!-- Luxury 2-panel layout constrained to content width -->
@@ -618,7 +618,7 @@
                         <p class="font-label-caps text-primary tracking-[0.3em] text-[10px] mb-1.5 opacity-80">01 / FOUNDER</p>
                         <h3 class="font-headline-md text-2xl lg:text-3xl text-white mb-1.5">Hiro</h3>
                         <div class="w-8 h-[1px] bg-primary mb-2"></div>
-                        <p class="font-label-caps text-[9px] tracking-widest text-white/60 uppercase">Founder & Lead Artist</p>
+                        <p class="font-label-caps text-[9px] tracking-widest text-white/60 uppercase">{{hiro_role}}</p>
                     </div>
                 </div>
 
@@ -635,7 +635,7 @@
                         <p class="font-label-caps text-primary tracking-[0.3em] text-[10px] mb-1.5 opacity-80">02 / SENIOR BARBER</p>
                         <h3 class="font-headline-md text-2xl lg:text-3xl text-white mb-1.5">Michal</h3>
                         <div class="w-8 h-[1px] bg-primary mb-2"></div>
-                        <p class="font-label-caps text-[9px] tracking-widest text-white/60 uppercase">Senior Barber</p>
+                        <p class="font-label-caps text-[9px] tracking-widest text-white/60 uppercase">{{michal_role}}</p>
                     </div>
                 </div>
                 <!-- end flex panels -->
@@ -649,14 +649,14 @@
 
                 <!-- Booking Form -->
                 <div class="flex-1 reveal reveal-left">
-                    <span class="font-label-caps text-primary tracking-[0.3em] uppercase block mb-4 text-sm">MAKE A RESERVATION</span>
-                    <h2 class="font-headline-md text-3xl lg:text-4xl mb-10 text-on-background">MAKE A RESERVATION</h2>
+                    <span class="font-label-caps text-primary tracking-[0.3em] uppercase block mb-4 text-sm">{{make_a_reservation}}</span>
+                    <h2 class="font-headline-md text-3xl lg:text-4xl mb-10 text-on-background">{{make_a_reservation}}</h2>
 
                     <div class="mt-8">
-                        <p class="text-on-surface-variant font-body-lg mb-8">To bring the best and most convenient experience, please book your appointment directly through our system.</p>
+                        <p class="text-on-surface-variant font-body-lg mb-8">{{to_bring_the_best_and_most_con}}</p>
                         <a href="https://hirobarbershop.setmore.com/" target="_blank"
                             class="inline-block w-full bg-primary text-on-primary py-5 font-label-caps tracking-widest font-bold hover:bg-primary-fixed transition-colors text-center rounded-sm outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-primary focus-visible:ring-offset-background">
-                            BOOK ON SETMORE
+                            {{book_on_setmore}}
                         </a>
                     </div>
                 </div>
@@ -680,23 +680,23 @@
                     <div class="grid grid-cols-1 sm:grid-cols-2 gap-8 lg:gap-12">
                         <address class="not-italic">
                             <h3 class="font-headline-md text-xl text-primary mb-3 flex items-center gap-2">
-                                <span class="material-symbols-outlined text-lg">location_on</span> Address
+                                <span class="material-symbols-outlined text-lg">location_on</span> {{address}}
                             </h3>
                             <p class="text-on-surface-variant font-body-lg text-sm leading-relaxed">
                                 Na slupi 135/13,<br>
                                 128 00 Praha-Vyšehrad,<br>
                                 Czechia<br>
-                                Tel: +420 777 882 999
+                                {{tel_420_777_882_999}}
                             </p>
                         </address>
                         <div>
                             <h3 class="font-headline-md text-xl text-primary mb-3 flex items-center gap-2">
-                                <span class="material-symbols-outlined text-lg">schedule</span> Opening Hours
+                                <span class="material-symbols-outlined text-lg">schedule</span> {{opening_hours}}
                             </h3>
                             <p class="text-on-surface-variant font-body-lg text-sm leading-relaxed">
-                                Mon - Fri: 09:30 - 20:00<br>
-                                Sat: 09:30 - 19:00<br>
-                                Sun: 10:00 - 12:30
+                                {{mon_fri_09_30_20_00}}<br>
+                                {{sat_09_30_19_00}}<br>
+                                {{sun_10_00_12_30}}
                             </p>
                         </div>
                     </div>
@@ -718,7 +718,7 @@
                     <span class="text-xl font-bold tracking-[0.2em] text-primary font-headline-md uppercase">HIRO BARBERSHOP</span>
                 </a>
                 <p class="text-on-surface-variant font-body-lg text-sm leading-relaxed max-w-sm">
-                    Officially opening in November 2024, combining creative youth with years of accumulated experience. Hiro Barbershop hopes to become a friend that helps shape customers' styles, allowing you to express your unique personality while remaining suitable for work and daily life. With nearly 150 positive reviews on Google Maps and reasonable, accessible prices, Hiro Barbershop is a new brand well worth experiencing ❤️❤️❤️❤️
+                    {{footer_desc}}
                 </p>
                 <div class="flex flex-wrap gap-4 mt-6">
                     <!-- Facebook -->
@@ -754,16 +754,16 @@
             <div class="flex flex-col gap-5 reveal reveal-delay-100">
                 <h4
                     class="font-label-caps text-sm text-on-surface tracking-widest border-b border-primary/20 pb-3 font-semibold">
-                    LINKS</h4>
+                    {{links}}</h4>
                 <nav class="flex flex-col gap-3" aria-label="Footer Navigation">
                     <a class="text-on-surface-variant text-sm hover:text-primary transition-colors duration-200"
-                        href="#services">Services</a>
+                        href="#services">{{services}}</a>
                     <a class="text-on-surface-variant text-sm hover:text-primary transition-colors duration-200"
-                        href="#portfolio">Gallery</a>
+                        href="#portfolio">{{gallery}}</a>
                     <a class="text-on-surface-variant text-sm hover:text-primary transition-colors duration-200"
-                        href="#team">Team</a>
+                        href="#team">{{team}}</a>
                     <a class="text-on-surface-variant text-sm hover:text-primary transition-colors duration-200"
-                        href="#">Privacy Policy</a>
+                        href="#">{{privacy_policy}}</a>
                 </nav>
             </div>
 
@@ -771,16 +771,16 @@
             <div class="flex flex-col gap-5 reveal reveal-delay-200">
                 <h4
                     class="font-label-caps text-sm text-on-surface tracking-widest border-b border-primary/20 pb-3 font-semibold">
-                    NEWSLETTER</h4>
-                <p class="text-on-surface-variant text-sm leading-relaxed mb-1">Subscribe để nhận ưu đãi và mẹo chăm sóc
+                    {{newsletter}}</h4>
+                <p class="text-on-surface-variant text-sm leading-relaxed mb-1">{{subscribe}} để nhận ưu đãi và mẹo chăm sóc
                     tóc độc quyền.</p>
                 <form class="flex border-b border-outline-variant hover:border-primary transition-colors group"
                     action="#" method="POST">
-                    <label for="email" class="sr-only">Address Email</label>
+                    <label for="email" class="sr-only">{{address}} Email</label>
                     <input id="email" type="email" required
                         class="bg-transparent border-0 py-3 text-sm focus:ring-0 w-full placeholder:text-on-surface-variant/50 text-on-background"
-                        placeholder="Your Email">
-                    <button type="submit" aria-label="Subscribe"
+                        placeholder="{{your_email}}">
+                    <button type="submit" aria-label="{{subscribe}}"
                         class="text-primary group-hover:translate-x-1 transition-transform pr-2 outline-none focus-visible:ring-2 focus-visible:ring-primary rounded">
                         <span class="material-symbols-outlined">arrow_right_alt</span>
                     </button>
@@ -791,7 +791,7 @@
         <!-- Copyright -->
         <div class="w-full py-6 px-6 lg:px-12 bg-surface-container-lowest text-center">
             <p class="text-on-surface-variant uppercase tracking-widest text-[10px] font-label-caps">© 2026 HIRO
-                BARBERSHOP. EXQUISITE TRADITION.</p>
+                BARBERSHOP. {{exquisite_tradition}}</p>
         </div>
     </footer>
 

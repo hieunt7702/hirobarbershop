@@ -1,4 +1,5 @@
 User-agent: *
 Allow: /
+Disallow: /assets/js/
 
-Sitemap: https://hirobarbershop.vn/sitemap.xml
+Sitemap: https://hirobarbershop.cz/sitemap.xml

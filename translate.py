@@ -1,6 +1,6 @@
 import re
 
-with open('index.html', 'r', encoding='utf-8') as f:
+with open('vi.html', 'r', encoding='utf-8') as f:
     html = f.read()
 
 # English replacements
@@ -50,6 +50,8 @@ en_replacements = {
     'CHỌN GIỜ (HÔM NAY)': "SELECT TIME (TODAY)",
     'Đã kín lịch': "Fully booked",
     'XÁC NHẬN ĐẶT LỊCH': "CONFIRM BOOKING",
+    'ĐẶT LỊCH TRÊN SETMORE': "BOOK ON SETMORE",
+    'Để mang lại trải nghiệm tốt nhất và tiện lợi nhất cho quý khách, vui lòng đặt lịch trực tiếp qua hệ thống của chúng tôi.': "To bring the best and most convenient experience, please book your appointment directly through our system.",
     'Địa chỉ': "Address",
     'SĐT: +420 777 882 999': "Tel: +420 777 882 999",
     'Giờ mở cửa': "Opening Hours",
@@ -66,14 +68,37 @@ en_replacements = {
     'Đăng ký để nhận ưu đãi và mẹo chăm sóc tóc độc quyền.': "Subscribe for exclusive offers and grooming tips.",
     'Email của bạn': "Your Email",
     'Đăng ký': "Subscribe",
+    'DỊCH VỤ': "SERVICES",
+    'THƯ VIỆN': "GALLERY",
+    'ĐỘI NGŨ': "TEAM",
+    'ĐẶT LỊCH': "BOOKING",
+    'GIỮ CHỖ NGAY': "BOOK NOW",
+    'XEM TRẢI NGHIỆM': "WATCH EXPERIENCE",
+    'Bảng giá dịch vụ': "Price List",
+    'ĐĂNG KÝ THÀNH VIÊN ĐỂ NHẬN ƯU ĐÃI KHỦNG': "BECOME A MEMBER FOR HUGE DISCOUNTS",
+    'Sinh nhật:': "Birthday:",
+    'Cha và con trai:': "Father and Son:",
+    'Cắt tóc mỗi 2 tuần:': "Haircut every 2 weeks:",
+    'Tích lũy 3 điểm, nhận 1 lần giảm giá': "Collect 3 points, get 1 discount",
+    'ƯU ĐÃI ĐẶC BIỆT:': "SPECIAL OFFER:",
+    'Khi giới thiệu bạn bè và người thân, cả hai sẽ nhận được ưu đãi giảm giá': "When referring friends and family, both get a discount",
+    'Áp dụng cho thành viên đã cắt trên 3 lần': "Applies to members with more than 3 visits",
+    'BẢNG GIÁ DỊCH VỤ': "SERVICE PRICE LIST",
+    'Cắt tóc nam': "Men's Haircut",
+    'Tóc dài - Hoặc chỉ cắt bằng kéo': "Long hair - Or scissors only",
+    'Cắt tóc & Cạo râu toàn bộ (-15%)': "Haircut & Full Shave (-15%)",
+    'Cắt tóc & Cạo viền râu': "Haircut & Beard Trim",
+    'Cạo râu cổ điển': "Classic Shave",
+    'Nhuộm râu': "Beard Dye",
+    'Cạo đầu & Cạo râu': "Head Shave & Beard",
+    'Uốn tóc': "Perm",
+    'Cắt tóc mỗi 2 tuần (-15%)': "Haircut every 2 weeks (-15%)",
+    'Cắt tóc sinh viên (dưới 24t) (-15%)': "Student Haircut (under 24) (-15%)",
+    'Những Nghệ Nhân': "Our Artists",
+    'NÉT TRUYỀN THỐNG TINH TẾ.': "EXQUISITE TRADITION.",
+    '<span class="text-[10px] lg:text-xs font-label-caps tracking-widest font-medium">VI</span>': '<span class="text-[10px] lg:text-xs font-label-caps tracking-widest font-medium">EN</span>',
+    '<img src="https://flagcdn.com/w20/vn.png" alt="VI" class="w-4 h-3 rounded-sm object-cover">': '<img src="https://flagcdn.com/w20/gb.png" alt="EN" class="w-4 h-3 rounded-sm object-cover">'
 }
-
-en_html = html
-for k, v in en_replacements.items():
-    en_html = en_html.replace(k, v)
-
-with open('en.html', 'w', encoding='utf-8') as f:
-    f.write(en_html)
 
 cs_replacements = {
     'lang="vi"': 'lang="cs"',
@@ -120,13 +145,15 @@ cs_replacements = {
     'CHỌN GIỜ (HÔM NAY)': "VYBERTE ČAS (DNES)",
     'Đã kín lịch': "Plně obsazeno",
     'XÁC NHẬN ĐẶT LỊCH': "POTVRDIT REZERVACI",
+    'ĐẶT LỊCH TRÊN SETMORE': "REZERVUJTE NA SETMORE",
+    'Để mang lại trải nghiệm tốt nhất và tiện lợi nhất cho quý khách, vui lòng đặt lịch trực tiếp qua hệ thống của chúng tôi.': "Abyste měli co nejlepší a nejpohodlnější zážitek, rezervujte si prosím termín přímo přes náš systém.",
     'Địa chỉ': "Adresa",
     'SĐT: +420 777 882 999': "Tel: +420 777 882 999",
     'Giờ mở cửa': "Otevírací Doba",
     'Thứ 2 - Thứ 6: 09:30 - 20:00': "Po - Pá: 09:30 - 20:00",
     'Thứ 7: 09:30 - 19:00': "So: 09:30 - 19:00",
     'CN: 10:00 - 12:30': "Ne: 10:00 - 12:30",
-    'Nơi truyền thống kết hợp cùng sự tỉ mỉ hiện đại. Nâng tầm chuẩn mực chăm sóc sắc đẹp nam giới tại trung tâm Sài Gòn từ 2018.': "Oficiálně otevíráme a zahajujeme provoz v listopadu 2024, s mladistvou kreativitou a zkušenostmi nasbíranými za mnoho let. Hiro Barbershop doufá, že se stane přítelem, který zákazníkům pomůže utvářet styl, umožní vám vyjádřit vaši osobnost, a přitom zůstane vhodný pro práci i každodenní život. S téměř 150 pozitivními recenzemi na Google Maps a rozumnými, dostupnými cenami je Hiro Barbershop novou značkou, kterou stojí za to vyzkoušet ❤️❤️❤️❤️",
+    'Chính thức khai trương và đi vào hoạt động từ tháng 11 năm 2024, cùng với sức trẻ sáng tạo và kinh nghiệm tích lũy nhiều năm. Hiro Barbershop hy vọng sẽ trở thành một người bạn giúp định hình phong cách cho khách hàng, giúp bạn thể hiện cá tính riêng nhưng vẫn phù hợp với công việc và cuộc sống hàng ngày. Với gần 150 đánh giá tích cực trên Google Maps cùng mức giá hợp lý, dễ tiếp cận, Hiro Barbershop là một thương hiệu mới rất đáng để trải nghiệm ❤️❤️❤️❤️': "Oficiálně otevíráme a zahajujeme provoz v listopadu 2024, s mladistvou kreativitou a zkušenostmi nasbíranými za mnoho let. Hiro Barbershop doufá, že se stane přítelem, který zákazníkům pomůže utvářet styl, umožní vám vyjádřit vaši osobnost, a přitom zůstane vhodný pro práci i každodenní život. S téměř 150 pozitivními recenzemi na Google Maps a rozumnými, dostupnými cenami je Hiro Barbershop novou značkou, kterou stojí za to vyzkoušet ❤️❤️❤️❤️",
     'LIÊN KẾT': "ODKAZY",
     'Dịch vụ': "Služby",
     'Thư viện ảnh': "Galerie",
@@ -136,11 +163,137 @@ cs_replacements = {
     'Đăng ký để nhận ưu đãi và mẹo chăm sóc tóc độc quyền.': "Přihlaste se k odběru pro exkluzivní nabídky a tipy na péči.",
     'Email của bạn': "Váš Email",
     'Đăng ký': "Odebírat",
+    'DỊCH VỤ': "SLUŽBY",
+    'THƯ VIỆN': "GALERIE",
+    'ĐỘI NGŨ': "TÝM",
+    'ĐẶT LỊCH': "REZERVACE",
+    'GIỮ CHỖ NGAY': "REZERVACE HNED",
+    'XEM TRẢI NGHIỆM': "ZOBRAZIT ZÁŽITEK",
+    'Bảng giá dịch vụ': "Ceník",
+    'ĐĂNG KÝ THÀNH VIÊN ĐỂ NHẬN ƯU ĐÃI KHỦNG': "ZÍSKAT ČLENSTVÍ PRO OBROVSKÉ SLEVY",
+    'Sinh nhật:': "Narozeniny:",
+    'Cha và con trai:': "Otec a syn:",
+    'Cắt tóc mỗi 2 tuần:': "Stříhání každé 2 týdny:",
+    'Tích lũy 3 điểm, nhận 1 lần giảm giá': "Nasbírejte 3 body, získejte 1 slevu",
+    'ƯU ĐÃI ĐẶC BIỆT:': "SPECIÁLNÍ NABÍDKA:",
+    'Khi giới thiệu bạn bè và người thân, cả hai sẽ nhận được ưu đãi giảm giá': "Při doporučení přátel a rodiny získají oba slevu",
+    'Áp dụng cho thành viên đã cắt trên 3 lần': "Platí pro členy s více než 3 návštěvami",
+    'BẢNG GIÁ DỊCH VỤ': "CENÍK SLUŽEB",
+    'Cắt tóc nam': "Pánský střih",
+    'Tóc dài - Hoặc chỉ cắt bằng kéo': "Dlouhé vlasy - Nebo s jenom nůžkama",
+    'Cắt tóc & Cạo râu toàn bộ (-15%)': "Stříhání & úprava vousů",
+    'Cắt tóc & Cạo viền râu': "Stříhání a zarovnat kontury vousů",
+    'Cạo râu cổ điển': "Úprava vousů",
+    'Nhuộm râu': "Barvení vousů",
+    'Cạo đầu & Cạo râu': "Oholení hlavy & vousy",
+    'Uốn tóc': "Trvalá ondulace",
+    'Cắt tóc mỗi 2 tuần (-15%)': "Stříhání za každé 2 týdny",
+    'Cắt tóc sinh viên (dưới 24t) (-15%)': "Stříhání pro studenta",
+    'Những Nghệ Nhân': "Naši Umělci",
+    'NÉT TRUYỀN THỐNG TINH TẾ.': "VYNIKAJÍCÍ TRADICE.",
+    '<span class="text-[10px] lg:text-xs font-label-caps tracking-widest font-medium">VI</span>': '<span class="text-[10px] lg:text-xs font-label-caps tracking-widest font-medium">CS</span>',
+    '<img src="https://flagcdn.com/w20/vn.png" alt="VI" class="w-4 h-3 rounded-sm object-cover">': '<img src="https://flagcdn.com/w20/cz.png" alt="CS" class="w-4 h-3 rounded-sm object-cover">'
 }
 
-cs_html = html
-for k, v in cs_replacements.items():
-    cs_html = cs_html.replace(k, v)
+de_replacements = {
+    'lang="vi"': 'lang="de"',
+    'Đẳng cấp kiểu tóc nam hiện đại': "Moderne Herrenpflege-Exzellenz",
+    'Fade chuẩn form': "Perfekter Fade",
+    'phục vụ tận tâm': "engagierter Service",
+    'Trải nghiệm không gian cắt tóc nam cao cấp tại trung tâm Quận 1. Nơi các nghệ nhân tạo nên phong thái lịch lãm cho từng quý ông.': "Erleben Sie einen Premium-Barbershop. Wo Meisterbarbiere elegante Stile für jeden Gentleman kreieren.",
+    'từ hơn 500+ quý ông': "von über 500+ Gentlemen",
+    'Tại sao chọn Hiro Barbershop': "Warum Hiro Barbershop wählen",
+    'CHUYÊN NGHIỆP': "PROFESSIONELL",
+    'Từng đường kéo được thực hiện bởi những nghệ nhân hàng đầu, đảm bảo độ chính xác tuyệt đối.': "Jeder Schnitt wird von Spitzenhandwerkern mit absoluter Präzision ausgeführt.",
+    'ĐÚNG GIỜ': "PÜNKTLICH",
+    'Sự tôn trọng thời gian của quý ông là ưu tiên tuyệt đối. Đặt lịch là làm ngay.': "Die Zeit eines Gentlemans zu respektieren ist unsere Priorität.",
+    'PHONG CÁCH': "STIL",
+    'Luôn cập nhật những xu hướng tóc nam thịnh hành nhất, tư vấn phù hợp khuôn mặt.': "Immer auf dem neuesten Stand der Haartrends, passend zu Ihrer Gesichtsform.",
+    'DỊCH VỤ VIP': "VIP-SERVICE",
+    'Không gian riêng tư, thư giãn cùng đồ uống hảo hạng trong suốt quá trình trải nghiệm.': "Private, entspannende Atmosphäre mit Premium-Getränken.",
+    'DỊCH VỤ ĐẲNG CẤP': "PREMIUM-DIENSTLEISTUNGEN",
+    'Chúng tôi không chỉ cắt tóc, chúng tôi kiến tạo phong thái của một quý ông hiện đại thông qua những kỹ thuật tinh xảo nhất.': "Wir schneiden nicht nur Haare; wir formen das Auftreten eines modernen Gentlemans.",
+    'ĐẶT LỊCH HẸN': "TERMIN VEREINBAREN",
+    'ĐẶT LỊCH TRÊN SETMORE': "AUF SETMORE BUCHEN",
+    'Để mang lại trải nghiệm tốt nhất và tiện lợi nhất cho quý khách, vui lòng đặt lịch trực tiếp qua hệ thống của chúng tôi.': "Um das beste Erlebnis zu bieten, buchen Sie Ihren Termin bitte direkt über unser System.",
+    'Địa chỉ': "Adresse",
+    'Giờ mở cửa': "Öffnungszeiten",
+    'LIÊN KẾT': "LINKS",
+    'Dịch vụ': "Dienstleistungen",
+    'Thư viện ảnh': "Galerie",
+    'Đội ngũ': "Team",
+    'Chính sách bảo mật': "Datenschutzrichtlinie",
+    'BẢN TIN': "NEWSLETTER",
+    'DỊCH VỤ': "DIENSTLEISTUNGEN",
+    'THƯ VIỆN': "GALERIE",
+    'ĐỘI NGŨ': "TEAM",
+    'ĐẶT LỊCH': "BUCHEN",
+    'GIỮ CHỖ NGAY': "JETZT BUCHEN",
+    'XEM TRẢI NGHIỆM': "ERLEBNIS ANSEHEN",
+    'Bảng giá dịch vụ': "Preisliste",
+    'ĐĂNG KÝ THÀNH VIÊN ĐỂ NHẬN ƯU ĐÃI KHỦNG': "MITGLIED WERDEN FÜR RIESIGE RABATTE",
+    'BẢNG GIÁ DỊCH VỤ': "PREISLISTE",
+    'Cắt tóc nam': "Herrenhaarschnitt",
+    'NÉT TRUYỀN THỐNG TINH TẾ.': "EXQUISITE TRADITION.",
+    '<span class="text-[10px] lg:text-xs font-label-caps tracking-widest font-medium">VI</span>': '<span class="text-[10px] lg:text-xs font-label-caps tracking-widest font-medium">DE</span>',
+    '<img src="https://flagcdn.com/w20/vn.png" alt="VI" class="w-4 h-3 rounded-sm object-cover">': '<img src="https://flagcdn.com/w20/de.png" alt="DE" class="w-4 h-3 rounded-sm object-cover">'
+}
 
-with open('cs.html', 'w', encoding='utf-8') as f:
-    f.write(cs_html)
+es_replacements = {
+    'lang="vi"': 'lang="es"',
+    'Đẳng cấp kiểu tóc nam hiện đại': "Excelencia moderna en peluquería masculina",
+    'Fade chuẩn form': "Fade perfecto",
+    'phục vụ tận tâm': "servicio dedicado",
+    'Trải nghiệm không gian cắt tóc nam cao cấp tại trung tâm Quận 1. Nơi các nghệ nhân tạo nên phong thái lịch lãm cho từng quý ông.': "Experimente una barbería premium. Donde los maestros barberos crean estilos elegantes para cada caballero.",
+    'từ hơn 500+ quý ông': "de más de 500 caballeros",
+    'Tại sao chọn Hiro Barbershop': "Por qué elegir Hiro Barbershop",
+    'CHUYÊN NGHIỆP': "PROFESIONAL",
+    'Từng đường kéo được thực hiện bởi những nghệ nhân hàng đầu, đảm bảo độ chính xác tuyệt đối.': "Cada corte es realizado por los mejores artesanos, garantizando precisión absoluta.",
+    'ĐÚNG GIỜ': "PUNTUAL",
+    'Sự tôn trọng thời gian của quý ông là ưu tiên tuyệt đối. Đặt lịch là làm ngay.': "Respetar el tiempo de un caballero es nuestra prioridad.",
+    'PHONG CÁCH': "ESTILO",
+    'Luôn cập nhật những xu hướng tóc nam thịnh hành nhất, tư vấn phù hợp khuôn mặt.': "Siempre actualizados con las últimas tendencias, adaptadas a tu rostro.",
+    'DỊCH VỤ VIP': "SERVICIO VIP",
+    'Không gian riêng tư, thư giãn cùng đồ uống hảo hạng trong suốt quá trình trải nghiệm.': "Atmósfera privada y relajante con bebidas premium.",
+    'DỊCH VỤ ĐẲNG CẤP': "SERVICIOS PREMIUM",
+    'Chúng tôi không chỉ cắt tóc, chúng tôi kiến tạo phong thái của một quý ông hiện đại thông qua những kỹ thuật tinh xảo nhất.': "No solo cortamos cabello; creamos la actitud de un caballero moderno.",
+    'ĐẶT LỊCH HẸN': "HACER UNA RESERVA",
+    'ĐẶT LỊCH TRÊN SETMORE': "RESERVAR EN SETMORE",
+    'Để mang lại trải nghiệm tốt nhất và tiện lợi nhất cho quý khách, vui lòng đặt lịch trực tiếp qua hệ thống của chúng tôi.': "Para brindar la mejor experiencia, reserve su cita a través de nuestro sistema.",
+    'Địa chỉ': "Dirección",
+    'Giờ mở cửa': "Horario de apertura",
+    'LIÊN KẾT': "ENLACES",
+    'Dịch vụ': "Servicios",
+    'Thư viện ảnh': "Galería",
+    'Đội ngũ': "Equipo",
+    'Chính sách bảo mật': "Política de Privacidad",
+    'BẢN TIN': "BOLETÍN",
+    'DỊCH VỤ': "SERVICIOS",
+    'THƯ VIỆN': "GALERÍA",
+    'ĐỘI NGŨ': "EQUIPO",
+    'ĐẶT LỊCH': "RESERVAR",
+    'GIỮ CHỖ NGAY': "RESERVAR AHORA",
+    'XEM TRẢI NGHIỆM': "VER EXPERIENCIA",
+    'Bảng giá dịch vụ': "Lista de Precios",
+    'ĐĂNG KÝ THÀNH VIÊN ĐỂ NHẬN ƯU ĐÃI KHỦNG': "SÉ MIEMBRO PARA GRANDES DESCUENTOS",
+    'BẢNG GIÁ DỊCH VỤ': "LISTA DE PRECIOS",
+    'Cắt tóc nam': "Corte de hombre",
+    'NÉT TRUYỀN THỐNG TINH TẾ.': "TRADICIÓN EXQUISITA.",
+    '<span class="text-[10px] lg:text-xs font-label-caps tracking-widest font-medium">VI</span>': '<span class="text-[10px] lg:text-xs font-label-caps tracking-widest font-medium">ES</span>',
+    '<img src="https://flagcdn.com/w20/vn.png" alt="VI" class="w-4 h-3 rounded-sm object-cover">': '<img src="https://flagcdn.com/w20/es.png" alt="ES" class="w-4 h-3 rounded-sm object-cover">'
+}
+
+configs = [
+    ('en.html', en_replacements),
+    ('index.html', cs_replacements),
+    ('de.html', de_replacements),
+    ('es.html', es_replacements)
+]
+
+for filename, replacements in configs:
+    out_html = html
+    for k, v in replacements.items():
+        out_html = out_html.replace(k, v)
+    with open(filename, 'w', encoding='utf-8') as f:
+        f.write(out_html)
+
