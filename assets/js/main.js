@@ -64,7 +64,7 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         }, {
             root: null,
-            rootMargin: '0px 0px -15% 0px',
+            rootMargin: '0px 0px -5% 0px',
             threshold: 0
         });
 
@@ -77,22 +77,13 @@ document.addEventListener('DOMContentLoaded', () => {
 const portfolioImages = [
     "assets/images/portfolio-new-9.jpg",
     "assets/images/portfolio-new-1.jpg",
-    "assets/images/video.mp4",
     "assets/images/portfolio-new-2.jpg",
-    "assets/images/video1.mp4",
     "assets/images/portfolio-new-3.jpg",
-    "assets/images/video2.mp4",
     "assets/images/portfolio-new-4.jpg",
-    "assets/images/video3.mp4",
     "assets/images/portfolio-new-5.jpg",
-    "assets/images/video4.mp4",
     "assets/images/portfolio-new-6.jpg",
-    "assets/images/video5.mp4",
     "assets/images/portfolio-new-7.jpg",
-    "assets/images/video6.mp4",
-    "assets/images/portfolio-new-11.jpg",
-    "assets/images/video7.mp4",
-    "assets/images/video8.mp4"
+    "assets/images/portfolio-new-11.jpg"
 ];
 let currentImageIndex = 0;
 
