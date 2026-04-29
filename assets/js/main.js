@@ -77,16 +77,22 @@ document.addEventListener('DOMContentLoaded', () => {
 const portfolioImages = [
     "assets/images/portfolio-new-9.jpg",
     "assets/images/portfolio-new-1.jpg",
+    "assets/images/video.mp4",
     "assets/images/portfolio-new-2.jpg",
+    "assets/images/video1.mp4",
     "assets/images/portfolio-new-3.jpg",
-    "assets/images/portfolio-new-5.jpg",
-    "assets/images/portfolio-new-7.jpg",
-    "assets/images/portfolio-new-11.jpg",
+    "assets/images/video2.mp4",
     "assets/images/portfolio-new-4.jpg",
+    "assets/images/video3.mp4",
+    "assets/images/portfolio-new-5.jpg",
+    "assets/images/video4.mp4",
     "assets/images/portfolio-new-6.jpg",
-    "assets/images/portfolio-new-8.jpg",
-    "assets/images/portfolio-new-10.jpg",
-    "assets/images/portfolio-new-12.jpg"
+    "assets/images/video5.mp4",
+    "assets/images/portfolio-new-7.jpg",
+    "assets/images/video6.mp4",
+    "assets/images/portfolio-new-11.jpg",
+    "assets/images/video7.mp4",
+    "assets/images/video8.mp4"
 ];
 let currentImageIndex = 0;
 
@@ -102,6 +108,8 @@ function openLightbox(index) {
 }
 
 function closeLightbox() {
+    const lightboxVideo = document.getElementById('lightbox-video');
+    if(lightboxVideo) lightboxVideo.pause();
     const lightbox = document.getElementById('lightbox');
     if (!lightbox) return;
     lightbox.classList.add('opacity-0');
@@ -126,19 +134,48 @@ function prevImage(e) {
 
 function updateLightboxImage() {
     const lightboxImg = document.getElementById('lightbox-img');
+    const lightboxVideo = document.getElementById('lightbox-video');
     const lightboxCounter = document.getElementById('lightbox-counter');
-    if (lightboxImg && lightboxCounter) {
-        lightboxImg.style.opacity = '0';
-        lightboxImg.style.transition = 'opacity 0.2s ease';
-        setTimeout(() => {
-            lightboxImg.src = portfolioImages[currentImageIndex];
-            lightboxImg.onload = () => {
-                lightboxImg.style.opacity = '1';
-            };
-            // In case image is cached and onload doesn't fire
-            if (lightboxImg.complete) lightboxImg.style.opacity = '1';
-        }, 150);
+    if (!portfolioImages || portfolioImages.length === 0) return;
+    const src = portfolioImages[currentImageIndex];
+
+    if (lightboxCounter) {
         lightboxCounter.textContent = `${currentImageIndex + 1} / ${portfolioImages.length}`;
+    }
+
+    if (src.endsWith('.mp4')) {
+        if (lightboxImg) {
+            lightboxImg.classList.add('hidden');
+            lightboxImg.src = '';
+        }
+        if (lightboxVideo) {
+            lightboxVideo.classList.remove('hidden');
+            lightboxVideo.src = src;
+            lightboxVideo.style.opacity = '0';
+            lightboxVideo.style.transition = 'opacity 0.2s ease';
+            setTimeout(() => {
+                lightboxVideo.style.opacity = '1';
+                lightboxVideo.play().catch(e => console.log(e));
+            }, 150);
+        }
+    } else {
+        if (lightboxVideo) {
+            lightboxVideo.classList.add('hidden');
+            lightboxVideo.pause();
+            lightboxVideo.src = '';
+        }
+        if (lightboxImg) {
+            lightboxImg.classList.remove('hidden');
+            lightboxImg.style.opacity = '0';
+            lightboxImg.style.transition = 'opacity 0.2s ease';
+            setTimeout(() => {
+                lightboxImg.src = src;
+                lightboxImg.onload = () => {
+                    lightboxImg.style.opacity = '1';
+                };
+                if (lightboxImg.complete) lightboxImg.style.opacity = '1';
+            }, 150);
+        }
     }
 }
 
