@@ -579,7 +579,7 @@
                                 <div class="pr-4 flex-1">
                                     <h4
                                         class="font-headline-md text-lg text-on-background group-hover:text-primary transition-colors">
-                                        Haarschnitt & Vollrasur (-15%)</h4>
+                                        Haarschnitt & komplette Bartpflege (-15%)</h4>
                                     <p class="text-xs text-on-surface-variant font-label-caps italic mt-1 opacity-80">
                                         Perfekte Kombination</p>
                                 </div>
@@ -592,7 +592,7 @@
                                 <div class="pr-4 flex-1">
                                     <h4
                                         class="font-headline-md text-lg text-on-background group-hover:text-primary transition-colors">
-                                        Haarschnitt & Bartkontur</h4>
+                                        Haarschnitt & Bartkonturen anpassen</h4>
                                     <p class="text-xs text-on-surface-variant font-label-caps italic mt-1 opacity-80">
                                         Absolute Sauberkeit</p>
                                 </div>
@@ -605,7 +605,7 @@
                                 <div class="pr-4 flex-1">
                                     <h4
                                         class="font-headline-md text-lg text-on-background group-hover:text-primary transition-colors">
-                                        Klassische Rasur</h4>
+                                        Klassische Bartpflege</h4>
                                     <p class="text-xs text-on-surface-variant font-label-caps italic mt-1 opacity-80">
                                         Traditionelle Rasur</p>
                                 </div>
@@ -694,30 +694,54 @@
             </div>
 
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- Product 1: Roug Black Matt Clay -->
+                <!-- Product 1: Roug -->
                 <article class="reveal group bg-surface-container border border-outline-variant/20 hover:border-primary/50 rounded-sm overflow-hidden transition-all duration-500 flex flex-col h-full">
                     <div class="aspect-square relative overflow-hidden bg-white/5 p-8 flex items-center justify-center">
-                        <img src="assets/images/product1.webp" alt="Roug Black Matt Clay" class="w-full h-full object-contain group-hover:scale-110 transition-transform duration-700 opacity-90 group-hover:opacity-100">
+                        <img src="assets/images/product1.webp" alt="Roug Matt Clay" class="w-full h-full object-contain group-hover:scale-110 transition-transform duration-700 opacity-90 group-hover:opacity-100">
                     </div>
                     <div class="p-6 relative z-10 border-t border-outline-variant/10 flex-1 flex flex-col">
-                        <h3 class="font-headline-md text-xl text-on-background mb-1 group-hover:text-primary transition-colors">Roug Schwarz/Weiß Matt Clay</h3>
-                        <div class="text-primary font-headline-md text-lg mb-5">450 CZK</div>
+                        <h3 class="font-headline-md text-xl text-on-background mb-1 group-hover:text-primary transition-colors">Roug Schwarz Matt Clay</h3>
+                        <div class="text-primary font-headline-md text-lg mb-3">450 CZK</div>
+                        <div class="flex gap-3 mb-4">
+                            <button type="button" class="color-btn w-6 h-6 rounded-full bg-[#1a1a1a] border-2 border-outline-variant ring-2 ring-primary ring-offset-2 ring-offset-surface-container transition-all"
+                                data-name="Roug Schwarz Matt Clay"
+                                data-desc="Für weiches Haar. 8-12 Stunden Halt. Starker Halt, mattes Finish, absorbiert Öl"
+                                data-img="assets/images/product1.webp"
+                                onclick="switchProduct(this)" aria-label="Black"></button>
+                            <button type="button" class="color-btn w-6 h-6 rounded-full bg-[#f0f0f0] border-2 border-outline-variant ring-2 ring-transparent ring-offset-2 ring-offset-surface-container transition-all"
+                                data-name="Roug Weiß Matt Clay"
+                                data-desc="Für hartes Haar. 8-12 Stunden Halt. Starker Halt, mattes Finish, absorbiert Öl"
+                                data-img="assets/images/roug_white.jpg"
+                                onclick="switchProduct(this)" aria-label="White"></button>
+                        </div>
                         <div class="space-y-3 text-sm text-on-surface-variant flex-1">
-                            <div><strong class="text-on-background font-label-caps uppercase text-[10px] tracking-widest block mb-1 opacity-70">Vorteile:</strong> Starker Halt, kein Glanz, absorbiert Öl</div>
+                            <div><strong class="text-on-background font-label-caps uppercase text-[10px] tracking-widest block mb-1 opacity-70">Effekt:</strong> <span class="product-desc-text">Für weiches Haar. 8-12 Stunden Halt. Starker Halt, mattes Finish, absorbiert Öl</span></div>
                         </div>
                     </div>
                 </article>
 
-                <!-- Product 2: Cinplus Wax -->
+                <!-- Product 2: Cinplus -->
                 <article class="reveal reveal-delay-100 group bg-surface-container border border-outline-variant/20 hover:border-primary/50 rounded-sm overflow-hidden transition-all duration-500 flex flex-col h-full">
                     <div class="aspect-square relative overflow-hidden bg-white/5 p-8 flex items-center justify-center">
                         <img src="assets/images/product2.webp" alt="Cinplus Wax" class="w-full h-full object-contain group-hover:scale-110 transition-transform duration-700 opacity-90 group-hover:opacity-100">
                     </div>
                     <div class="p-6 relative z-10 border-t border-outline-variant/10 flex-1 flex flex-col">
-                        <h3 class="font-headline-md text-xl text-on-background mb-1 group-hover:text-primary transition-colors">Cinplus Wax Schwarz/Weiß</h3>
-                        <div class="text-primary font-headline-md text-lg mb-5">450 CZK</div>
+                        <h3 class="font-headline-md text-xl text-on-background mb-1 group-hover:text-primary transition-colors">Cinplus Wax Schwarz</h3>
+                        <div class="text-primary font-headline-md text-lg mb-3">450 CZK</div>
+                        <div class="flex gap-3 mb-4">
+                            <button type="button" class="color-btn w-6 h-6 rounded-full bg-[#1a1a1a] border-2 border-outline-variant ring-2 ring-primary ring-offset-2 ring-offset-surface-container transition-all"
+                                data-name="Cinplus Wax Schwarz"
+                                data-desc="Für kurzes Haar. 8-12 Stunden Halt. Flexibler Halt, natürliches Styling"
+                                data-img="assets/images/product2.webp"
+                                onclick="switchProduct(this)" aria-label="Black"></button>
+                            <button type="button" class="color-btn w-6 h-6 rounded-full bg-[#f0f0f0] border-2 border-outline-variant ring-2 ring-transparent ring-offset-2 ring-offset-surface-container transition-all"
+                                data-name="Cinplus Wax Weiß"
+                                data-desc="Für langes Haar. 8-12 Stunden Halt. Flexibler Halt, natürliches Styling"
+                                data-img="assets/images/cinplus_white.png"
+                                onclick="switchProduct(this)" aria-label="White"></button>
+                        </div>
                         <div class="space-y-3 text-sm text-on-surface-variant flex-1">
-                            <div><strong class="text-on-background font-label-caps uppercase text-[10px] tracking-widest block mb-1 opacity-70">Vorteile:</strong> Flexibler Halt, natürliches Styling</div>
+                            <div><strong class="text-on-background font-label-caps uppercase text-[10px] tracking-widest block mb-1 opacity-70">Effekt:</strong> <span class="product-desc-text">Für kurzes Haar. 8-12 Stunden Halt. Flexibler Halt, natürliches Styling</span></div>
                         </div>
                     </div>
                 </article>
@@ -743,7 +767,7 @@
                     </div>
                     <div class="p-6 relative z-10 border-t border-outline-variant/10 flex-1 flex flex-col">
                         <h3 class="font-headline-md text-xl text-on-background mb-1 group-hover:text-primary transition-colors">Nishman Hair Styling Powder</h3>
-                        <div class="text-primary font-headline-md text-lg mb-5">200 CZK</div>
+                        <div class="text-primary font-headline-md text-lg mb-5">220 CZK</div>
                         <div class="space-y-3 text-sm text-on-surface-variant flex-1">
                             <div><strong class="text-on-background font-label-caps uppercase text-[10px] tracking-widest block mb-1 opacity-70">Vorteile:</strong> Maximales Volumen und Textur</div>
                         </div>
@@ -757,20 +781,20 @@
                     </div>
                     <div class="p-6 relative z-10 border-t border-outline-variant/10 flex-1 flex flex-col">
                         <h3 class="font-headline-md text-xl text-on-background mb-1 group-hover:text-primary transition-colors">Stylingkamm</h3>
-                        <div class="text-primary font-headline-md text-lg mb-5">150 CZK</div>
+                        <div class="text-primary font-headline-md text-lg mb-5">100 CZK</div>
                         <div class="space-y-3 text-sm text-on-surface-variant flex-1">
                             <div><strong class="text-on-background font-label-caps uppercase text-[10px] tracking-widest block mb-1 opacity-70">Vorteile:</strong> Unterstützt Volumen und Haarformung</div>
                         </div>
                     </div>
                 </article>
 
-                <!-- Product 6: SuperHairo Voucher -->
+                <!-- Product 6: Hiro barbershop voucher -->
                 <article class="reveal reveal-delay-500 group bg-surface-container border border-outline-variant/20 hover:border-primary/50 rounded-sm overflow-hidden transition-all duration-500 flex flex-col h-full">
                     <div class="aspect-square relative overflow-hidden bg-white/5 p-8 flex items-center justify-center">
-                        <img src="assets/images/product6.jpg" alt="SuperHairo Voucher" class="w-full h-full object-contain group-hover:scale-110 transition-transform duration-700 opacity-90 group-hover:opacity-100">
+                        <img src="assets/images/product6.jpg" alt="Hiro barbershop voucher" class="w-full h-full object-contain group-hover:scale-110 transition-transform duration-700 opacity-90 group-hover:opacity-100">
                     </div>
                     <div class="p-6 relative z-10 border-t border-outline-variant/10 flex-1 flex flex-col">
-                        <h3 class="font-headline-md text-xl text-on-background mb-1 group-hover:text-primary transition-colors">SuperHairo Voucher</h3>
+                        <h3 class="font-headline-md text-xl text-on-background mb-1 group-hover:text-primary transition-colors">Hiro barbershop voucher</h3>
                         <div class="text-primary font-headline-md text-lg mb-5">499 - 739 CZK</div>
                         <div class="space-y-3 text-sm text-on-surface-variant flex-1">
                             <div><strong class="text-on-background font-label-caps uppercase text-[10px] tracking-widest block mb-1 opacity-70">Vorteile:</strong> Ein sinnvoller Geschenkgutschein für Ihre Liebsten</div>
@@ -898,7 +922,7 @@
 
                     <!-- Hiro panel -->
                     <div class="reveal group relative flex-1 overflow-hidden" style="min-height: 420px;">
-                        <img class="w-full h-full object-cover object-top grayscale transition-all duration-1000 group-hover:grayscale-0 group-hover:scale-105"
+                        <img class="w-full h-full object-cover object-top transition-all duration-1000 group-hover:scale-105"
                             src="assets/images/hiro.webp" alt="Hiro - Founder" loading="lazy">
                         <!-- Dark overlay always visible -->
                         <div class="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent"></div>
@@ -921,7 +945,7 @@
                     <!-- Michal panel -->
                     <div class="reveal reveal-delay-200 group relative flex-1 overflow-hidden"
                         style="min-height: 420px;">
-                        <img class="w-full h-full object-cover object-top grayscale transition-all duration-1000 group-hover:grayscale-0 group-hover:scale-105"
+                        <img class="w-full h-full object-cover object-top transition-all duration-1000 group-hover:scale-105"
                             src="assets/images/michal.webp" alt="Michal - Senior Barber" loading="lazy">
                         <!-- Dark overlay always visible -->
                         <div class="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent"></div>
@@ -1039,7 +1063,7 @@
                     MAP</h4>
 
                 <div
-                    class="h-48 sm:h-64 w-full bg-surface-container grayscale hover:grayscale-0 transition-all duration-700 overflow-hidden border border-outline-variant/20 rounded-sm mb-6">
+                    class="h-48 sm:h-64 w-full bg-surface-container hover:scale-105 transition-all duration-700 overflow-hidden border border-outline-variant/20 rounded-sm mb-6">
                     <iframe
                         src="https://maps.google.com/maps?q=50.06886,14.42284&t=&z=16&ie=UTF8&iwloc=&output=embed"
                         width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"

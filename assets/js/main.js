@@ -204,3 +204,30 @@ function preloadAdjacentImages() {
         img.src = portfolioImages[i];
     });
 }
+
+// Product Color Switcher
+function switchProduct(btn) {
+    const card = btn.closest('article');
+    if (!card) return;
+    const img = card.querySelector('img');
+    const title = card.querySelector('h3');
+    const desc = card.querySelector('.product-desc-text');
+    
+    // Update active button state
+    const buttons = card.querySelectorAll('.color-btn');
+    buttons.forEach(b => {
+        b.classList.remove('ring-primary');
+        b.classList.add('ring-transparent');
+    });
+    btn.classList.remove('ring-transparent');
+    btn.classList.add('ring-primary');
+
+    // Data for products
+    const name = btn.getAttribute('data-name');
+    const descText = btn.getAttribute('data-desc');
+    const imgSrc = btn.getAttribute('data-img');
+
+    if (name && title) title.textContent = name;
+    if (descText && desc) desc.textContent = descText;
+    if (imgSrc && img) img.src = imgSrc;
+}
