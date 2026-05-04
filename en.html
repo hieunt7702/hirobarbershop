@@ -287,8 +287,8 @@
                     GENTLEMAN - STYLE DEFINED.</span>
                 <h1
                     class="font-display-lg text-4xl sm:text-5xl lg:text-7xl text-on-background mb-8 leading-[1.1] animate-fade-in-up">
-                    Modern men's grooming excellence <br class="hidden sm:block" />
-                    <span class="text-primary italic">Perfect fade</span> – dedicated service
+                    Modern men's grooming excellence <br class="block lg:hidden" />
+                    <span class="text-primary italic">Perfect fade</span>
                 </h1>
                 <p class="text-on-surface-variant font-body-lg text-lg mb-10 max-w-xl opacity-90">
                     Experience premium men's grooming in the heart of Prague. Where artisans craft the elegant demeanor
@@ -351,7 +351,7 @@
                     <div
                         class="flex items-center gap-2 bg-background/50 border border-primary/20 px-4 py-2 rounded-full relative z-10 group-hover:bg-primary/10 transition-colors">
                         <span class="material-symbols-outlined text-primary text-[20px]">workspace_premium</span>
-                        <span class="text-xs font-label-caps tracking-wider text-on-surface uppercase">Top 1 selected by
+                        <span class="text-xs font-label-caps tracking-wider text-on-surface uppercase">Top 1 recommended by
                             Google</span>
                     </div>
                 </a>
@@ -694,111 +694,111 @@
                 <p class="mt-4 text-on-surface-variant max-w-xl mx-auto text-sm lg:text-base">Professional hair care and styling products trusted by our masters.</p>
             </div>
 
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div class="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-8">
                 <!-- Product 1: Roug -->
-                <article class="reveal group bg-surface-container border border-outline-variant/20 hover:border-primary/50 rounded-sm overflow-hidden transition-all duration-500 flex flex-col h-full">
-                    <div class="aspect-square relative overflow-hidden bg-white/5 p-8 flex items-center justify-center">
+                <article class="reveal group bg-surface-container border border-outline-variant/20 hover:border-primary/50 rounded-sm overflow-hidden transition-all duration-500 flex flex-col h-full sm:cursor-default cursor-pointer" onclick="openProductModal(this)">
+                    <div class="aspect-square relative overflow-hidden bg-white/5 p-4 sm:p-10 lg:p-14 flex items-center justify-center">
                         <img src="assets/images/product1.webp" alt="Roug Matt Clay" class="w-full h-full object-contain group-hover:scale-110 transition-transform duration-700 opacity-90 group-hover:opacity-100">
                     </div>
-                    <div class="p-6 relative z-10 border-t border-outline-variant/10 flex-1 flex flex-col">
-                        <h3 class="font-headline-md text-xl text-on-background mb-1 group-hover:text-primary transition-colors">Roug Black Matt Clay</h3>
-                        <div class="text-primary font-headline-md text-lg mb-3">450 CZK</div>
-                        <div class="flex gap-3 mb-4">
+                    <div class="p-3 sm:p-6 relative z-10 border-t border-outline-variant/10 flex-1 flex flex-col">
+                        <h3 class="font-headline-md text-sm sm:text-xl text-on-background mb-1 group-hover:text-primary transition-colors line-clamp-2">Roug Black Matt Clay</h3>
+                        <div class="product-price text-primary font-headline-md text-sm sm:text-lg mb-2 sm:mb-3">450 CZK</div>
+                        <div class="hidden sm:flex gap-3 mb-4">
                             <button type="button" class="color-btn w-6 h-6 rounded-full bg-[#1a1a1a] border-2 border-outline-variant ring-2 ring-primary ring-offset-2 ring-offset-surface-container transition-all"
                                 data-name="Roug Black Matt Clay"
                                 data-desc="For soft hair. 8-12 hours hold. Strong hold, matte finish, absorbs oil"
                                 data-img="assets/images/product1.webp"
-                                onclick="switchProduct(this)" aria-label="Black"></button>
+                                onclick="event.stopPropagation(); switchProduct(this)" aria-label="Black"></button>
                             <button type="button" class="color-btn w-6 h-6 rounded-full bg-[#f0f0f0] border-2 border-outline-variant ring-2 ring-transparent ring-offset-2 ring-offset-surface-container transition-all"
                                 data-name="Roug White Matt Clay"
                                 data-desc="For hard hair. 8-12 hours hold. Strong hold, matte finish, absorbs oil"
                                 data-img="assets/images/roug_white.jpg"
-                                onclick="switchProduct(this)" aria-label="White"></button>
+                                onclick="event.stopPropagation(); switchProduct(this)" aria-label="White"></button>
                         </div>
-                        <div class="space-y-3 text-sm text-on-surface-variant flex-1">
+                        <div class="hidden sm:block space-y-3 text-sm text-on-surface-variant flex-1">
                             <div><strong class="text-on-background font-label-caps uppercase text-[10px] tracking-widest block mb-1 opacity-70">Effect:</strong> <span class="product-desc-text">For soft hair. 8-12 hours hold. Strong hold, matte finish, absorbs oil</span></div>
                         </div>
                     </div>
                 </article>
 
                 <!-- Product 2: Cinplus -->
-                <article class="reveal reveal-delay-100 group bg-surface-container border border-outline-variant/20 hover:border-primary/50 rounded-sm overflow-hidden transition-all duration-500 flex flex-col h-full">
-                    <div class="aspect-square relative overflow-hidden bg-white/5 p-8 flex items-center justify-center">
+                <article class="reveal reveal-delay-100 group bg-surface-container border border-outline-variant/20 hover:border-primary/50 rounded-sm overflow-hidden transition-all duration-500 flex flex-col h-full sm:cursor-default cursor-pointer" onclick="openProductModal(this)">
+                    <div class="aspect-square relative overflow-hidden bg-white/5 p-4 sm:p-10 lg:p-14 flex items-center justify-center">
                         <img src="assets/images/product2.webp" alt="Cinplus Wax" class="w-full h-full object-contain group-hover:scale-110 transition-transform duration-700 opacity-90 group-hover:opacity-100">
                     </div>
-                    <div class="p-6 relative z-10 border-t border-outline-variant/10 flex-1 flex flex-col">
-                        <h3 class="font-headline-md text-xl text-on-background mb-1 group-hover:text-primary transition-colors">Cinplus Wax Black</h3>
-                        <div class="text-primary font-headline-md text-lg mb-3">450 CZK</div>
-                        <div class="flex gap-3 mb-4">
+                    <div class="p-3 sm:p-6 relative z-10 border-t border-outline-variant/10 flex-1 flex flex-col">
+                        <h3 class="font-headline-md text-sm sm:text-xl text-on-background mb-1 group-hover:text-primary transition-colors line-clamp-2">Cinplus Wax Black</h3>
+                        <div class="product-price text-primary font-headline-md text-sm sm:text-lg mb-2 sm:mb-3">450 CZK</div>
+                        <div class="hidden sm:flex gap-3 mb-4">
                             <button type="button" class="color-btn w-6 h-6 rounded-full bg-[#1a1a1a] border-2 border-outline-variant ring-2 ring-primary ring-offset-2 ring-offset-surface-container transition-all"
                                 data-name="Cinplus Wax Black"
                                 data-desc="For short hair. 8-12 hours hold. Flexible hold, natural styling"
                                 data-img="assets/images/product2.webp"
-                                onclick="switchProduct(this)" aria-label="Black"></button>
+                                onclick="event.stopPropagation(); switchProduct(this)" aria-label="Black"></button>
                             <button type="button" class="color-btn w-6 h-6 rounded-full bg-[#f0f0f0] border-2 border-outline-variant ring-2 ring-transparent ring-offset-2 ring-offset-surface-container transition-all"
                                 data-name="Cinplus Wax White"
                                 data-desc="For long hair. 8-12 hours hold. Flexible hold, natural styling"
                                 data-img="assets/images/cinplus_white.png"
-                                onclick="switchProduct(this)" aria-label="White"></button>
+                                onclick="event.stopPropagation(); switchProduct(this)" aria-label="White"></button>
                         </div>
-                        <div class="space-y-3 text-sm text-on-surface-variant flex-1">
+                        <div class="hidden sm:block space-y-3 text-sm text-on-surface-variant flex-1">
                             <div><strong class="text-on-background font-label-caps uppercase text-[10px] tracking-widest block mb-1 opacity-70">Effect:</strong> <span class="product-desc-text">For short hair. 8-12 hours hold. Flexible hold, natural styling</span></div>
                         </div>
                     </div>
                 </article>
 
                 <!-- Product 3: Reuzel Tonic -->
-                <article class="reveal reveal-delay-200 group bg-surface-container border border-outline-variant/20 hover:border-primary/50 rounded-sm overflow-hidden transition-all duration-500 flex flex-col h-full">
-                    <div class="aspect-square relative overflow-hidden bg-white/5 p-8 flex items-center justify-center">
+                <article class="reveal reveal-delay-200 group bg-surface-container border border-outline-variant/20 hover:border-primary/50 rounded-sm overflow-hidden transition-all duration-500 flex flex-col h-full sm:cursor-default cursor-pointer" onclick="openProductModal(this)">
+                    <div class="aspect-square relative overflow-hidden bg-white/5 p-4 sm:p-10 lg:p-14 flex items-center justify-center">
                         <img src="assets/images/product3.jpg" alt="Reuzel Tonic" class="w-full h-full object-contain group-hover:scale-110 transition-transform duration-700 opacity-90 group-hover:opacity-100">
                     </div>
-                    <div class="p-6 relative z-10 border-t border-outline-variant/10 flex-1 flex flex-col">
-                        <h3 class="font-headline-md text-xl text-on-background mb-1 group-hover:text-primary transition-colors">Reuzel Hair Grooming Tonic</h3>
-                        <div class="text-primary font-headline-md text-lg mb-5">220 CZK</div>
-                        <div class="space-y-3 text-sm text-on-surface-variant flex-1">
-                            <div><strong class="text-on-background font-label-caps uppercase text-[10px] tracking-widest block mb-1 opacity-70">Benefits:</strong> Heat protection, nourishes hair</div>
+                    <div class="p-3 sm:p-6 relative z-10 border-t border-outline-variant/10 flex-1 flex flex-col">
+                        <h3 class="font-headline-md text-sm sm:text-xl text-on-background mb-1 group-hover:text-primary transition-colors line-clamp-2">Reuzel Hair Grooming Tonic</h3>
+                        <div class="product-price text-primary font-headline-md text-sm sm:text-lg mb-2 sm:mb-5">220 CZK</div>
+                        <div class="hidden sm:block space-y-3 text-sm text-on-surface-variant flex-1">
+                            <div><strong class="text-on-background font-label-caps uppercase text-[10px] tracking-widest block mb-1 opacity-70">Benefits:</strong> <span class="product-desc-text">Heat protection, nourishes hair</span></div>
                         </div>
                     </div>
                 </article>
 
                 <!-- Product 4: Nishman Powder -->
-                <article class="reveal reveal-delay-300 group bg-surface-container border border-outline-variant/20 hover:border-primary/50 rounded-sm overflow-hidden transition-all duration-500 flex flex-col h-full">
-                    <div class="aspect-square relative overflow-hidden bg-white/5 p-8 flex items-center justify-center">
+                <article class="reveal reveal-delay-300 group bg-surface-container border border-outline-variant/20 hover:border-primary/50 rounded-sm overflow-hidden transition-all duration-500 flex flex-col h-full sm:cursor-default cursor-pointer" onclick="openProductModal(this)">
+                    <div class="aspect-square relative overflow-hidden bg-white/5 p-4 sm:p-10 lg:p-14 flex items-center justify-center">
                         <img src="assets/images/product4.webp" alt="Nishman Powder" class="w-full h-full object-contain group-hover:scale-110 transition-transform duration-700 opacity-90 group-hover:opacity-100">
                     </div>
-                    <div class="p-6 relative z-10 border-t border-outline-variant/10 flex-1 flex flex-col">
-                        <h3 class="font-headline-md text-xl text-on-background mb-1 group-hover:text-primary transition-colors">Nishman Hair Styling Powder</h3>
-                        <div class="text-primary font-headline-md text-lg mb-5">220 CZK</div>
-                        <div class="space-y-3 text-sm text-on-surface-variant flex-1">
-                            <div><strong class="text-on-background font-label-caps uppercase text-[10px] tracking-widest block mb-1 opacity-70">Benefits:</strong> Maximum volume and texture</div>
+                    <div class="p-3 sm:p-6 relative z-10 border-t border-outline-variant/10 flex-1 flex flex-col">
+                        <h3 class="font-headline-md text-sm sm:text-xl text-on-background mb-1 group-hover:text-primary transition-colors line-clamp-2">Nishman Hair Styling Powder</h3>
+                        <div class="product-price text-primary font-headline-md text-sm sm:text-lg mb-2 sm:mb-5">220 CZK</div>
+                        <div class="hidden sm:block space-y-3 text-sm text-on-surface-variant flex-1">
+                            <div><strong class="text-on-background font-label-caps uppercase text-[10px] tracking-widest block mb-1 opacity-70">Benefits:</strong> <span class="product-desc-text">Maximum volume and texture</span></div>
                         </div>
                     </div>
                 </article>
 
                 <!-- Product 5: Styling Comb -->
-                <article class="reveal reveal-delay-400 group bg-surface-container border border-outline-variant/20 hover:border-primary/50 rounded-sm overflow-hidden transition-all duration-500 flex flex-col h-full">
-                    <div class="aspect-square relative overflow-hidden bg-white/5 p-8 flex items-center justify-center">
+                <article class="reveal reveal-delay-400 group bg-surface-container border border-outline-variant/20 hover:border-primary/50 rounded-sm overflow-hidden transition-all duration-500 flex flex-col h-full sm:cursor-default cursor-pointer" onclick="openProductModal(this)">
+                    <div class="aspect-square relative overflow-hidden bg-white/5 p-4 sm:p-10 lg:p-14 flex items-center justify-center">
                         <img src="assets/images/product5.webp" alt="Styling Comb" class="w-full h-full object-contain group-hover:scale-110 transition-transform duration-700 opacity-90 group-hover:opacity-100">
                     </div>
-                    <div class="p-6 relative z-10 border-t border-outline-variant/10 flex-1 flex flex-col">
-                        <h3 class="font-headline-md text-xl text-on-background mb-1 group-hover:text-primary transition-colors">Styling Comb</h3>
-                        <div class="text-primary font-headline-md text-lg mb-5">100 CZK</div>
-                        <div class="space-y-3 text-sm text-on-surface-variant flex-1">
-                            <div><strong class="text-on-background font-label-caps uppercase text-[10px] tracking-widest block mb-1 opacity-70">Benefits:</strong> Supports volume and hair shaping</div>
+                    <div class="p-3 sm:p-6 relative z-10 border-t border-outline-variant/10 flex-1 flex flex-col">
+                        <h3 class="font-headline-md text-sm sm:text-xl text-on-background mb-1 group-hover:text-primary transition-colors line-clamp-2">Styling Comb</h3>
+                        <div class="product-price text-primary font-headline-md text-sm sm:text-lg mb-2 sm:mb-5">100 CZK</div>
+                        <div class="hidden sm:block space-y-3 text-sm text-on-surface-variant flex-1">
+                            <div><strong class="text-on-background font-label-caps uppercase text-[10px] tracking-widest block mb-1 opacity-70">Benefits:</strong> <span class="product-desc-text">Supports volume and hair shaping</span></div>
                         </div>
                     </div>
                 </article>
 
                 <!-- Product 6: Hiro barbershop voucher -->
-                <article class="reveal reveal-delay-500 group bg-surface-container border border-outline-variant/20 hover:border-primary/50 rounded-sm overflow-hidden transition-all duration-500 flex flex-col h-full">
-                    <div class="aspect-square relative overflow-hidden bg-white/5 p-8 flex items-center justify-center">
+                <article class="reveal reveal-delay-500 group bg-surface-container border border-outline-variant/20 hover:border-primary/50 rounded-sm overflow-hidden transition-all duration-500 flex flex-col h-full sm:cursor-default cursor-pointer" onclick="openProductModal(this)">
+                    <div class="aspect-square relative overflow-hidden bg-white/5 p-4 sm:p-10 lg:p-14 flex items-center justify-center">
                         <img src="assets/images/product6.jpg" alt="Hiro barbershop voucher" class="w-full h-full object-contain group-hover:scale-110 transition-transform duration-700 opacity-90 group-hover:opacity-100">
                     </div>
-                    <div class="p-6 relative z-10 border-t border-outline-variant/10 flex-1 flex flex-col">
-                        <h3 class="font-headline-md text-xl text-on-background mb-1 group-hover:text-primary transition-colors">Hiro barbershop voucher</h3>
-                        <div class="text-primary font-headline-md text-lg mb-5">499 - 739 CZK</div>
-                        <div class="space-y-3 text-sm text-on-surface-variant flex-1">
-                            <div><strong class="text-on-background font-label-caps uppercase text-[10px] tracking-widest block mb-1 opacity-70">Benefits:</strong> A meaningful gift voucher for your loved ones</div>
+                    <div class="p-3 sm:p-6 relative z-10 border-t border-outline-variant/10 flex-1 flex flex-col">
+                        <h3 class="font-headline-md text-sm sm:text-xl text-on-background mb-1 group-hover:text-primary transition-colors line-clamp-2">Hiro barbershop voucher</h3>
+                        <div class="product-price text-primary font-headline-md text-sm sm:text-lg mb-2 sm:mb-5">499 - 739 CZK</div>
+                        <div class="hidden sm:block space-y-3 text-sm text-on-surface-variant flex-1">
+                            <div><strong class="text-on-background font-label-caps uppercase text-[10px] tracking-widest block mb-1 opacity-70">Benefits:</strong> <span class="product-desc-text">A meaningful gift voucher for your loved ones</span></div>
                         </div>
                     </div>
                 </article>
@@ -812,10 +812,10 @@
                 <h2 class="font-headline-md text-3xl lg:text-4xl text-on-background">OUR MASTERPIECES</h2>
             </div>
 
-            <div class="grid grid-cols-12 auto-rows-[150px] md:auto-rows-[180px] lg:auto-rows-[220px] gap-3 lg:gap-4">
+            <div class="grid grid-cols-2 sm:grid-cols-12 auto-rows-[150px] md:auto-rows-[180px] lg:auto-rows-[220px] gap-3 lg:gap-4">
 
                 <figure onclick="openLightbox(0)"
-                    class="reveal reveal-scale col-span-12 md:col-span-8 lg:col-span-8 row-span-2 relative overflow-hidden group cursor-pointer rounded-xl bg-surface-container">
+                    class="reveal reveal-scale col-span-2 sm:col-span-12 md:col-span-8 lg:col-span-8 row-span-2 relative overflow-hidden group cursor-pointer rounded-xl bg-surface-container">
                     <img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                         loading="lazy" src="assets/images/portfolio-new-9.jpg" alt="Hiro Barbershop Haircut Style">
                     <div
@@ -825,7 +825,7 @@
                 </figure>
 
                 <figure onclick="openLightbox(1)"
-                    class="reveal reveal-scale reveal-delay-100 col-span-6 md:col-span-4 lg:col-span-4 row-span-1 relative overflow-hidden group cursor-pointer rounded-xl bg-surface-container">
+                    class="reveal reveal-scale reveal-delay-100 col-span-1 sm:col-span-6 md:col-span-4 lg:col-span-4 row-span-1 relative overflow-hidden group cursor-pointer rounded-xl bg-surface-container">
                     <img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                         loading="lazy" src="assets/images/portfolio-new-1.jpg" alt="Hiro Barbershop Haircut Style">
                     <div
@@ -835,7 +835,7 @@
                 </figure>
 
                 <figure onclick="openLightbox(2)"
-                    class="reveal reveal-scale reveal-delay-200 col-span-6 md:col-span-4 lg:col-span-4 row-span-1 relative overflow-hidden group cursor-pointer rounded-xl bg-surface-container">
+                    class="reveal reveal-scale reveal-delay-200 col-span-1 sm:col-span-6 md:col-span-4 lg:col-span-4 row-span-1 relative overflow-hidden group cursor-pointer rounded-xl bg-surface-container">
                     <img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                         loading="lazy" src="assets/images/portfolio-new-2.jpg" alt="Hiro Barbershop Haircut Style">
                     <div
@@ -845,7 +845,7 @@
                 </figure>
 
                 <figure onclick="openLightbox(3)"
-                    class="reveal reveal-scale reveal-delay-300 col-span-12 md:col-span-4 lg:col-span-3 row-span-2 relative overflow-hidden group cursor-pointer rounded-xl bg-surface-container">
+                    class="reveal reveal-scale reveal-delay-300 col-span-1 sm:col-span-12 md:col-span-4 lg:col-span-3 row-span-1 sm:row-span-2 relative overflow-hidden group cursor-pointer rounded-xl bg-surface-container">
                     <img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                         loading="lazy" src="assets/images/portfolio-new-3.jpg" alt="Hiro Barbershop Haircut Style">
                     <div
@@ -855,7 +855,7 @@
                 </figure>
 
                 <figure onclick="openLightbox(4)"
-                    class="reveal reveal-scale col-span-12 md:col-span-8 lg:col-span-6 row-span-2 relative overflow-hidden group cursor-pointer rounded-xl bg-surface-container">
+                    class="reveal reveal-scale col-span-1 sm:col-span-12 md:col-span-8 lg:col-span-6 row-span-1 sm:row-span-2 relative overflow-hidden group cursor-pointer rounded-xl bg-surface-container">
                     <img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                         loading="lazy" src="assets/images/portfolio-new-4.jpg" alt="Hiro Barbershop Haircut Style">
                     <div
@@ -865,7 +865,7 @@
                 </figure>
 
                 <figure onclick="openLightbox(5)"
-                    class="reveal reveal-scale reveal-delay-100 col-span-12 md:col-span-12 lg:col-span-3 row-span-2 relative overflow-hidden group cursor-pointer rounded-xl bg-surface-container">
+                    class="reveal reveal-scale reveal-delay-100 col-span-1 sm:col-span-12 md:col-span-12 lg:col-span-3 row-span-1 sm:row-span-2 relative overflow-hidden group cursor-pointer rounded-xl bg-surface-container">
                     <img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                         loading="lazy" src="assets/images/portfolio-new-5.jpg" alt="Hiro Barbershop Haircut Style">
                     <div
@@ -875,7 +875,7 @@
                 </figure>
 
                 <figure onclick="openLightbox(6)"
-                    class="reveal reveal-scale reveal-delay-200 col-span-12 md:col-span-4 lg:col-span-4 row-span-1 relative overflow-hidden group cursor-pointer rounded-xl bg-surface-container">
+                    class="reveal reveal-scale reveal-delay-200 col-span-1 sm:col-span-12 md:col-span-4 lg:col-span-4 row-span-1 relative overflow-hidden group cursor-pointer rounded-xl bg-surface-container">
                     <img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                         loading="lazy" src="assets/images/portfolio-new-6.jpg" alt="Hiro Barbershop Haircut Style">
                     <div
@@ -885,7 +885,7 @@
                 </figure>
 
                 <figure onclick="openLightbox(7)"
-                    class="reveal reveal-scale reveal-delay-300 col-span-6 md:col-span-4 lg:col-span-4 row-span-1 relative overflow-hidden group cursor-pointer rounded-xl bg-surface-container">
+                    class="reveal reveal-scale reveal-delay-300 col-span-1 sm:col-span-6 md:col-span-4 lg:col-span-4 row-span-1 relative overflow-hidden group cursor-pointer rounded-xl bg-surface-container">
                     <img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                         loading="lazy" src="assets/images/portfolio-new-7.jpg" alt="Hiro Barbershop Haircut Style">
                     <div
@@ -895,7 +895,7 @@
                 </figure>
 
                 <figure onclick="openLightbox(8)"
-                    class="reveal reveal-scale col-span-6 md:col-span-4 lg:col-span-4 row-span-1 relative overflow-hidden group cursor-pointer rounded-xl bg-surface-container">
+                    class="reveal reveal-scale col-span-1 sm:col-span-6 md:col-span-4 lg:col-span-4 row-span-1 relative overflow-hidden group cursor-pointer rounded-xl bg-surface-container">
                     <img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                         loading="lazy" src="assets/images/portfolio-new-11.jpg" alt="Hiro Barbershop Haircut Style">
                     <div
@@ -1065,7 +1065,7 @@
                 <div
                     class="h-48 sm:h-64 w-full bg-surface-container hover:scale-105 transition-all duration-700 overflow-hidden border border-outline-variant/20 rounded-sm mb-6">
                     <iframe
-                        src="https://maps.google.com/maps?q=50.06886,14.42284&t=&z=16&ie=UTF8&iwloc=&output=embed"
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1250.8!2d14.42284!3d50.06886!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x470b9500165d1229%3A0xd0f3ba759452c438!2sHIRO%20barbershop!5e0!3m2!1scs!2scz!4v1"
                         width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
                         referrerpolicy="no-referrer-when-downgrade"
                         class="w-full h-full object-cover opacity-80 hover:opacity-100 transition-opacity duration-700"
@@ -1146,6 +1146,30 @@
             <span id="lightbox-counter">1 / 12</span>
         </div>
     </div>
+
+    <!-- Product Detail Modal (Mobile) -->
+    <div id="product-modal" class="fixed inset-0 z-[120] bg-black/90 hidden flex-col items-center justify-center opacity-0 transition-opacity duration-300 p-4">
+        <button onclick="closeProductModal()" class="absolute top-4 right-4 text-white hover:text-yellow-400 transition-colors p-2 z-[121]">
+            <span class="material-symbols-outlined text-4xl">close</span>
+        </button>
+        <div class="relative w-full max-w-sm bg-surface-container rounded-xl overflow-hidden shadow-2xl" onclick="event.stopPropagation()">
+            <img id="pm-img" src="" class="w-full aspect-square object-contain bg-white/5 p-8" alt="">
+            <div class="p-6 border-t border-outline-variant/20">
+                <h3 id="pm-title" class="font-headline-md text-xl text-on-background mb-1"></h3>
+                <div id="pm-price" class="text-primary font-headline-md text-lg mb-3"></div>
+                <div id="pm-colors" class="flex gap-3 mb-4"></div>
+                <div class="text-sm text-on-surface-variant">
+                    <strong id="pm-label" class="text-on-background font-label-caps uppercase text-[10px] tracking-widest block mb-1 opacity-70">Popis:</strong>
+                    <span id="pm-desc"></span>
+                </div>
+                <a href="https://hirobarbershop.setmore.com/" target="_blank"
+                    class="mt-6 block w-full text-center bg-primary text-on-primary py-3 font-label-caps tracking-widest font-bold hover:bg-primary-fixed transition-colors rounded-sm text-sm">
+                    <span id="pm-book-btn">REZERVACE HNED</span>
+                </a>
+            </div>
+        </div>
+    </div>
+
 </body>
 
 </html>

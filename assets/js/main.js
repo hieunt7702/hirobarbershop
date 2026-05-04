@@ -231,3 +231,91 @@ function switchProduct(btn) {
     if (descText && desc) desc.textContent = descText;
     if (imgSrc && img) img.src = imgSrc;
 }
+
+// i18n strings for product modal
+const modalI18n = {
+    cs: { label: 'Účinek:', btn: 'REZERVACE HNED' },
+    vi: { label: 'Công dụng:', btn: 'ĐẶT LỊCH NGAY' },
+    en: { label: 'Effect:', btn: 'BOOK NOW' },
+    de: { label: 'Wirkung:', btn: 'JETZT BUCHEN' },
+    es: { label: 'Efecto:', btn: 'RESERVAR AHORA' }
+};
+
+// Product Detail Modal (for mobile)
+function openProductModal(articleEl) {
+    // Only open on mobile (max 640px)
+    if (window.innerWidth >= 640) return;
+
+    const img = articleEl.querySelector('img');
+    const title = articleEl.querySelector('h3');
+    const price = articleEl.querySelector('.product-price');
+    const desc = articleEl.querySelector('.product-desc-text');
+    const colorBtns = articleEl.querySelectorAll('.color-btn');
+
+    const modal = document.getElementById('product-modal');
+    if (!modal) return;
+
+    const modalImg = document.getElementById('pm-img');
+    const modalTitle = document.getElementById('pm-title');
+    const modalPrice = document.getElementById('pm-price');
+    const modalDesc = document.getElementById('pm-desc');
+    const modalColors = document.getElementById('pm-colors');
+    const modalLabel = document.getElementById('pm-label');
+    const modalBookBtn = document.getElementById('pm-book-btn');
+
+    if (modalImg && img) modalImg.src = img.src;
+    if (modalTitle && title) modalTitle.textContent = title.textContent;
+    if (modalPrice && price) modalPrice.textContent = price.textContent;
+    if (modalDesc && desc) modalDesc.textContent = desc.textContent;
+
+    // Apply i18n strings
+    const lang = document.documentElement.lang || 'cs';
+    const i18n = modalI18n[lang] || modalI18n['cs'];
+    if (modalLabel) modalLabel.textContent = i18n.label;
+    if (modalBookBtn) modalBookBtn.textContent = i18n.btn;
+
+    // Clone color buttons into modal
+    if (modalColors) {
+        modalColors.innerHTML = '';
+        colorBtns.forEach(btn => {
+            const clone = btn.cloneNode(true);
+            clone.onclick = function() {
+                // Switch product in original card
+                switchProduct(btn);
+                // Update modal display
+                const newImg = articleEl.querySelector('img');
+                const newTitle = articleEl.querySelector('h3');
+                const newDesc = articleEl.querySelector('.product-desc-text');
+                if (modalImg && newImg) modalImg.src = newImg.src;
+                if (modalTitle && newTitle) modalTitle.textContent = newTitle.textContent;
+                if (modalDesc && newDesc) modalDesc.textContent = newDesc.textContent;
+                // Update active state in modal
+                modalColors.querySelectorAll('.color-btn').forEach(b => {
+                    b.classList.remove('ring-primary');
+                    b.classList.add('ring-transparent');
+                });
+                clone.classList.remove('ring-transparent');
+                clone.classList.add('ring-primary');
+            };
+            modalColors.appendChild(clone);
+        });
+    }
+
+    modal.classList.remove('hidden');
+    modal.classList.add('flex');
+    setTimeout(() => modal.classList.remove('opacity-0'), 10);
+    document.body.style.overflow = 'hidden';
+}
+
+function closeProductModal() {
+    const modal = document.getElementById('product-modal');
+    if (!modal) return;
+    modal.classList.add('opacity-0');
+    setTimeout(() => {
+        modal.classList.add('hidden');
+        modal.classList.remove('flex');
+        document.body.style.overflow = '';
+    }, 300);
+}
+
+
