@@ -19,13 +19,13 @@
     <meta name="ICBM" content="50.06886, 14.42284">
 
     <!-- Canonical & Hreflang -->
-    <link rel="canonical" href="https://hirobarbershop.cz/vi.html">
-    <link rel="alternate" hreflang="vi" href="https://hirobarbershop.cz/vi.html">
-    <link rel="alternate" hreflang="en" href="https://hirobarbershop.cz/en.html">
-    <link rel="alternate" hreflang="cs" href="https://hirobarbershop.cz/">
-    <link rel="alternate" hreflang="de" href="https://hirobarbershop.cz/de.html">
-    <link rel="alternate" hreflang="es" href="https://hirobarbershop.cz/es.html">
-    <link rel="alternate" hreflang="x-default" href="https://hirobarbershop.cz/">
+    <link rel="canonical" href="https://hirobarbershop.com/vi.html">
+    <link rel="alternate" hreflang="vi" href="https://hirobarbershop.com/vi.html">
+    <link rel="alternate" hreflang="en" href="https://hirobarbershop.com/en.html">
+    <link rel="alternate" hreflang="cs" href="https://hirobarbershop.com/">
+    <link rel="alternate" hreflang="de" href="https://hirobarbershop.com/de.html">
+    <link rel="alternate" hreflang="es" href="https://hirobarbershop.com/es.html">
+    <link rel="alternate" hreflang="x-default" href="https://hirobarbershop.com/">
 
     <!-- Favicon & Theme -->
     <meta name="theme-color" content="#F3F4F6">
@@ -36,11 +36,11 @@
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="Hiro Barbershop">
     <meta property="og:locale" content="vi_VN">
-    <meta property="og:url" content="https://hirobarbershop.cz/vi.html">
+    <meta property="og:url" content="https://hirobarbershop.com/vi.html">
     <meta property="og:title" content="Hiro Barbershop Praha | Cắt Tóc Nam Cao Cấp Vyšehrad Prague">
     <meta property="og:description"
         content="Hiro Barbershop – tiệm cắt tóc nam cao cấp tại Praha Vyšehrad. Skin fade, classic cut, tỉa râu chuyên nghiệp. Đặt lịch ngay tại hirobarbershop.setmore.com.">
-    <meta property="og:image" content="https://hirobarbershop.cz/assets/images/hero.jpg">
+    <meta property="og:image" content="https://hirobarbershop.com/assets/images/hero.jpg">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
     <meta property="og:image:alt" content="Hiro Barbershop - Premium barbershop in Prague Vyšehrad">
@@ -50,7 +50,7 @@
     <meta name="twitter:title" content="Hiro Barbershop Praha | Cắt Tóc Nam Cao Cấp Vyšehrad Prague">
     <meta name="twitter:description"
         content="Hiro Barbershop – tiệm cắt tóc nam cao cấp tại Praha Vyšehrad. Skin fade, classic cut, tỉa râu chuyên nghiệp. Đặt lịch ngay tại hirobarbershop.setmore.com.">
-    <meta name="twitter:image" content="https://hirobarbershop.cz/assets/images/hero.jpg">
+    <meta name="twitter:image" content="https://hirobarbershop.com/assets/images/hero.jpg">
 
     <!-- Schema: LocalBusiness / Barbershop -->
     <script type="application/ld+json">
@@ -61,12 +61,12 @@
       "alternateName": "SuperHairo Barbershop",
       "description": "Premium barbershop in Prague Vyšehrad offering skin fade, classic cuts, beard grooming and men's styling. Open since November 2024.",
       "image": [
-        "https://hirobarbershop.cz/assets/images/hero.jpg",
-        "https://hirobarbershop.cz/assets/images/logo.png"
+        "https://hirobarbershop.com/assets/images/hero.jpg",
+        "https://hirobarbershop.com/assets/images/logo.png"
       ],
-      "logo": "https://hirobarbershop.cz/assets/images/logo.png",
-      "@id": "https://hirobarbershop.cz",
-      "url": "https://hirobarbershop.cz",
+      "logo": "https://hirobarbershop.com/assets/images/logo.png",
+      "@id": "https://hirobarbershop.com",
+      "url": "https://hirobarbershop.com",
       "telephone": "+420777882999",
       "priceRange": "490–790 CZK",
       "currenciesAccepted": "CZK",
@@ -170,6 +170,10 @@
 
     <!-- Tailwind Configuration -->
     <script src="assets/js/tailwind-config.js"></script>
+
+    <!-- Vercel Analytics & Speed Insights -->
+    <script defer src="/_vercel/insights/script.js"></script>
+    <script defer src="/_vercel/speed-insights/script.js"></script>
 </head>
 
 <body class="font-body-lg bg-background text-on-background antialiased selection:bg-primary selection:text-on-primary">
@@ -281,12 +285,13 @@
 
         <!-- Hero Section -->
         <section class="relative min-h-[90vh] flex items-center px-6 lg:px-12 max-w-screen-2xl mx-auto overflow-hidden">
-            <div class="z-10 max-w-3xl py-20">
+            <div class="z-10 max-w-3xl lg:max-w-none py-20">
                 <span
                     class="font-label-caps text-primary mb-6 block tracking-[0.4em] text-sm font-semibold uppercase animate-fade-in-up">Tinh
                     hoa nghệ thuật Barber - Nâng tầm phong thái.</span>
                 <h1
-                    class="font-display-lg text-4xl sm:text-5xl lg:text-7xl text-on-background mb-8 leading-[1.1] animate-fade-in-up">
+                    class="font-display-lg text-4xl sm:text-5xl lg:text-7xl lg:whitespace-nowrap text-on-background mb-8 leading-[1.1] animate-fade-in-up">
+                    <span class="sr-only">Hiro Barbershop Praha - Tiệm cắt tóc nam cao cấp tại Vyšehrad</span>
                     Đẳng cấp quý ông <br class="block lg:hidden" />
                     <span class="text-primary italic">Định hình phong cách</span>
                 </h1>
@@ -1167,10 +1172,6 @@
                     <strong id="pm-label" class="text-on-background font-label-caps uppercase text-[10px] tracking-widest block mb-1 opacity-70">Popis:</strong>
                     <span id="pm-desc"></span>
                 </div>
-                <a href="https://hirobarbershop.setmore.com/" target="_blank"
-                    class="mt-6 block w-full text-center bg-primary text-on-primary py-3 font-label-caps tracking-widest font-bold hover:bg-primary-fixed transition-colors rounded-sm text-sm">
-                    <span id="pm-book-btn">REZERVACE HNED</span>
-                </a>
             </div>
         </div>
     </div>

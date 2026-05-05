@@ -261,7 +261,6 @@ function openProductModal(articleEl) {
     const modalDesc = document.getElementById('pm-desc');
     const modalColors = document.getElementById('pm-colors');
     const modalLabel = document.getElementById('pm-label');
-    const modalBookBtn = document.getElementById('pm-book-btn');
 
     if (modalImg && img) modalImg.src = img.src;
     if (modalTitle && title) modalTitle.textContent = title.textContent;
@@ -272,7 +271,6 @@ function openProductModal(articleEl) {
     const lang = document.documentElement.lang || 'cs';
     const i18n = modalI18n[lang] || modalI18n['cs'];
     if (modalLabel) modalLabel.textContent = i18n.label;
-    if (modalBookBtn) modalBookBtn.textContent = i18n.btn;
 
     // Clone color buttons into modal
     if (modalColors) {
