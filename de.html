@@ -285,22 +285,28 @@
 
         <!-- Hero Section -->
         <section class="relative min-h-[90vh] flex items-center px-6 lg:px-12 max-w-screen-2xl mx-auto overflow-hidden">
+            <!-- Ambient gold glow -->
+            <div class="hero-glow"></div>
+            <!-- Corner ornament -->
+            <div class="hero-corner-ornament"></div>
+
             <div class="z-10 max-w-3xl lg:max-w-none py-20">
                 <span
-                    class="font-label-caps text-primary mb-6 block tracking-[0.4em] text-sm font-semibold uppercase animate-fade-in-up">PREMIUM
+                    class="hero-label font-label-caps text-primary mb-6 block tracking-[0.4em] text-sm font-semibold uppercase animate-fade-in-up">
+                    <span class="hero-label-line"></span>PREMIUM
                     GENTLEMAN - STIL DEFINIERT.</span>
                 <h1
-                    class="font-display-lg text-4xl sm:text-5xl lg:text-7xl text-on-background mb-8 leading-[1.1] animate-fade-in-up">
-                    Premium-Gentlemen <br class="block lg:hidden" />
-                    <span class="text-primary italic">Stil definiert</span>
+                    class="hero-h1 font-display-lg text-4xl sm:text-5xl lg:text-7xl text-on-background mb-8 leading-[1.1] animate-fade-in-up">
+                    Moderne Herrenpflege-Exzellenz <br class="block lg:hidden" />
+                    <span class="text-gold-gradient">Perfekter Fade</span>
                 </h1>
-                <p class="text-on-surface-variant font-body-lg text-lg mb-10 max-w-xl opacity-90">
+                <p class="hero-p text-on-surface-variant font-body-lg text-lg mb-10 max-w-xl opacity-90 animate-fade-in-up">
                     Erleben Sie erstklassige Herrenpflege im Herzen von Prag. Wo Handwerksmeister den eleganten Stil für
                     jeden Gentleman kreieren.
                 </p>
-                <div class="flex flex-col sm:flex-row gap-6 items-start sm:items-center">
+                <div class="hero-cta flex flex-col sm:flex-row gap-6 items-start sm:items-center animate-fade-in-up">
                     <a href="https://hirobarbershop.setmore.com/" target="_blank"
-                        class="bg-primary text-on-primary px-10 py-4 font-label-caps tracking-widest font-bold hover:bg-primary-fixed transition-colors duration-300 text-center w-full sm:w-auto outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-primary focus-visible:ring-offset-background rounded">
+                        class="btn-primary-hero bg-primary text-on-primary px-10 py-4 font-label-caps tracking-widest font-bold hover:bg-primary-fixed transition-colors duration-300 text-center w-full sm:w-auto outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-primary focus-visible:ring-offset-background rounded">
                         JETZT BUCHEN
                     </a>
 
@@ -383,10 +389,26 @@
                     alt="Close-up of a master barber meticulously detailing a low fade haircut in a dimly lit high-end barbershop with warm gold accents"
                     src="assets/images/hero.jpg" fetchpriority="high">
             </div>
+
+            <!-- Scroll Indicator -->
+            <div class="scroll-indicator">
+                <div class="scroll-indicator-dot"></div>
+                <div class="scroll-indicator-line"></div>
+            </div>
         </section>
+
+        <!-- Brand Ticker Strip -->
+        <div class="brand-ticker">
+            <div class="brand-ticker-inner">
+                <span>&nbsp;&nbsp;&nbsp;&bull;&nbsp;&nbsp;&nbsp;HÍRO BARBERSHOP&nbsp;&nbsp;&nbsp;&bull;&nbsp;&nbsp;&nbsp;VYŠEHRAD PRAG&nbsp;&nbsp;&nbsp;&bull;&nbsp;&nbsp;&nbsp;PREMIUM BARBERSHOP&nbsp;&nbsp;&nbsp;&bull;&nbsp;&nbsp;&nbsp;SKIN FADE SPEZIALIST&nbsp;&nbsp;&nbsp;&bull;&nbsp;&nbsp;&nbsp;BARTPFLEGE&nbsp;&nbsp;&nbsp;&bull;&nbsp;&nbsp;&nbsp;4.9 ★ GOOGLE&nbsp;&nbsp;&nbsp;&bull;&nbsp;&nbsp;&nbsp;JETZT BUCHEN&nbsp;&nbsp;&nbsp;&bull;&nbsp;&nbsp;&nbsp;HÍRO BARBERSHOP&nbsp;&nbsp;&nbsp;&bull;&nbsp;&nbsp;&nbsp;VYŠEHRAD PRAG&nbsp;&nbsp;&nbsp;&bull;&nbsp;&nbsp;&nbsp;PREMIUM BARBERSHOP&nbsp;&nbsp;&nbsp;&bull;&nbsp;&nbsp;&nbsp;SKIN FADE SPEZIALIST&nbsp;&nbsp;&nbsp;&bull;&nbsp;&nbsp;&nbsp;BARTPFLEGE&nbsp;&nbsp;&nbsp;&bull;&nbsp;&nbsp;&nbsp;4.9 ★ GOOGLE&nbsp;&nbsp;&nbsp;&bull;&nbsp;&nbsp;&nbsp;JETZT BUCHEN&nbsp;&nbsp;&nbsp;</span>
+            </div>
+        </div>
 
         <!-- Why Choose Us -->
         <section class="py-20 lg:py-28 px-6 lg:px-12 max-w-screen-2xl mx-auto border-t border-primary/10">
+            <div class="flex justify-center mb-12">
+                <span class="section-label">Hiro Barbershop</span>
+            </div>
             <h2 class="sr-only">Warum Hiro Barbershop wählen</h2>
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-12 lg:gap-16">
                 <!-- Feature 1 -->
@@ -474,11 +496,12 @@
             <div class="max-w-screen-2xl mx-auto">
                 <div class="flex flex-col lg:flex-row justify-between items-start lg:items-end mb-16 gap-6 reveal">
                     <div>
-                        <span
-                            class="font-label-caps text-primary tracking-widest block mb-3 uppercase font-semibold">Preisliste</span>
-                        <h2
-                            class="font-headline-md text-3xl lg:text-4xl relative pb-4 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-16 after:h-[2px] after:bg-primary uppercase">
-                            PREMIUM-DIENSTLEISTUNGEN</h2>
+                        <div class="flex flex-col space-y-4">
+                            <span class="section-label">Premium Grooming</span>
+                            <h2 class="font-headline-md text-4xl lg:text-5xl uppercase">
+                                PREMIUM <span class="text-gold-gradient">DIENSTLEISTUNGEN</span>
+                            </h2>
+                        </div>
                     </div>
                     <p class="max-w-md text-on-surface-variant font-body-lg italic opacity-80 leading-relaxed">
                         Wir schneiden nicht nur Haare; wir formen das Auftreten eines modernen Gentlemans.
@@ -490,7 +513,7 @@
                     <!-- Membership Box -->
                     <div class="lg:col-span-5 xl:col-span-4 reveal reveal-left">
                         <div
-                            class="bg-surface-container border border-primary/30 p-8 lg:p-10 rounded-sm relative overflow-hidden group">
+                            class="corner-brackets bg-surface-container border border-primary/30 p-8 lg:p-10 rounded-sm relative overflow-hidden group">
                             <!-- Background decoration -->
                             <div
                                 class="absolute -top-24 -right-24 text-primary/5 pointer-events-none group-hover:text-primary/10 transition-colors duration-700">
