@@ -4,72 +4,72 @@
 
   <!-- Czech (default) -->
   <url>
-    <loc>https://hirobarbershop.com/</loc>
+    <loc>https://hirobarbershop.cz/</loc>
     <lastmod>2026-04-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
-    <xhtml:link rel="alternate" hreflang="cs"      href="https://hirobarbershop.com/"/>
-    <xhtml:link rel="alternate" hreflang="vi"      href="https://hirobarbershop.com/vi.html"/>
-    <xhtml:link rel="alternate" hreflang="en"      href="https://hirobarbershop.com/en.html"/>
-    <xhtml:link rel="alternate" hreflang="de"      href="https://hirobarbershop.com/de.html"/>
-    <xhtml:link rel="alternate" hreflang="es"      href="https://hirobarbershop.com/es.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://hirobarbershop.com/"/>
+    <xhtml:link rel="alternate" hreflang="cs"      href="https://hirobarbershop.cz/"/>
+    <xhtml:link rel="alternate" hreflang="vi"      href="https://hirobarbershop.cz/vi.html"/>
+    <xhtml:link rel="alternate" hreflang="en"      href="https://hirobarbershop.cz/en.html"/>
+    <xhtml:link rel="alternate" hreflang="de"      href="https://hirobarbershop.cz/de.html"/>
+    <xhtml:link rel="alternate" hreflang="es"      href="https://hirobarbershop.cz/es.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://hirobarbershop.cz/"/>
   </url>
 
   <!-- Vietnamese -->
   <url>
-    <loc>https://hirobarbershop.com/vi.html</loc>
+    <loc>https://hirobarbershop.cz/vi.html</loc>
     <lastmod>2026-04-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
-    <xhtml:link rel="alternate" hreflang="cs"      href="https://hirobarbershop.com/"/>
-    <xhtml:link rel="alternate" hreflang="vi"      href="https://hirobarbershop.com/vi.html"/>
-    <xhtml:link rel="alternate" hreflang="en"      href="https://hirobarbershop.com/en.html"/>
-    <xhtml:link rel="alternate" hreflang="de"      href="https://hirobarbershop.com/de.html"/>
-    <xhtml:link rel="alternate" hreflang="es"      href="https://hirobarbershop.com/es.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://hirobarbershop.com/"/>
+    <xhtml:link rel="alternate" hreflang="cs"      href="https://hirobarbershop.cz/"/>
+    <xhtml:link rel="alternate" hreflang="vi"      href="https://hirobarbershop.cz/vi.html"/>
+    <xhtml:link rel="alternate" hreflang="en"      href="https://hirobarbershop.cz/en.html"/>
+    <xhtml:link rel="alternate" hreflang="de"      href="https://hirobarbershop.cz/de.html"/>
+    <xhtml:link rel="alternate" hreflang="es"      href="https://hirobarbershop.cz/es.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://hirobarbershop.cz/"/>
   </url>
 
   <!-- English -->
   <url>
-    <loc>https://hirobarbershop.com/en.html</loc>
+    <loc>https://hirobarbershop.cz/en.html</loc>
     <lastmod>2026-04-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
-    <xhtml:link rel="alternate" hreflang="cs"      href="https://hirobarbershop.com/"/>
-    <xhtml:link rel="alternate" hreflang="vi"      href="https://hirobarbershop.com/vi.html"/>
-    <xhtml:link rel="alternate" hreflang="en"      href="https://hirobarbershop.com/en.html"/>
-    <xhtml:link rel="alternate" hreflang="de"      href="https://hirobarbershop.com/de.html"/>
-    <xhtml:link rel="alternate" hreflang="es"      href="https://hirobarbershop.com/es.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://hirobarbershop.com/"/>
+    <xhtml:link rel="alternate" hreflang="cs"      href="https://hirobarbershop.cz/"/>
+    <xhtml:link rel="alternate" hreflang="vi"      href="https://hirobarbershop.cz/vi.html"/>
+    <xhtml:link rel="alternate" hreflang="en"      href="https://hirobarbershop.cz/en.html"/>
+    <xhtml:link rel="alternate" hreflang="de"      href="https://hirobarbershop.cz/de.html"/>
+    <xhtml:link rel="alternate" hreflang="es"      href="https://hirobarbershop.cz/es.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://hirobarbershop.cz/"/>
   </url>
 
   <!-- German -->
   <url>
-    <loc>https://hirobarbershop.com/de.html</loc>
+    <loc>https://hirobarbershop.cz/de.html</loc>
     <lastmod>2026-04-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="cs"      href="https://hirobarbershop.com/"/>
-    <xhtml:link rel="alternate" hreflang="vi"      href="https://hirobarbershop.com/vi.html"/>
-    <xhtml:link rel="alternate" hreflang="en"      href="https://hirobarbershop.com/en.html"/>
-    <xhtml:link rel="alternate" hreflang="de"      href="https://hirobarbershop.com/de.html"/>
-    <xhtml:link rel="alternate" hreflang="es"      href="https://hirobarbershop.com/es.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://hirobarbershop.com/"/>
+    <xhtml:link rel="alternate" hreflang="cs"      href="https://hirobarbershop.cz/"/>
+    <xhtml:link rel="alternate" hreflang="vi"      href="https://hirobarbershop.cz/vi.html"/>
+    <xhtml:link rel="alternate" hreflang="en"      href="https://hirobarbershop.cz/en.html"/>
+    <xhtml:link rel="alternate" hreflang="de"      href="https://hirobarbershop.cz/de.html"/>
+    <xhtml:link rel="alternate" hreflang="es"      href="https://hirobarbershop.cz/es.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://hirobarbershop.cz/"/>
   </url>
 
   <!-- Spanish -->
   <url>
-    <loc>https://hirobarbershop.com/es.html</loc>
+    <loc>https://hirobarbershop.cz/es.html</loc>
     <lastmod>2026-04-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="cs"      href="https://hirobarbershop.com/"/>
-    <xhtml:link rel="alternate" hreflang="vi"      href="https://hirobarbershop.com/vi.html"/>
-    <xhtml:link rel="alternate" hreflang="en"      href="https://hirobarbershop.com/en.html"/>
-    <xhtml:link rel="alternate" hreflang="de"      href="https://hirobarbershop.com/de.html"/>
-    <xhtml:link rel="alternate" hreflang="es"      href="https://hirobarbershop.com/es.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://hirobarbershop.com/"/>
+    <xhtml:link rel="alternate" hreflang="cs"      href="https://hirobarbershop.cz/"/>
+    <xhtml:link rel="alternate" hreflang="vi"      href="https://hirobarbershop.cz/vi.html"/>
+    <xhtml:link rel="alternate" hreflang="en"      href="https://hirobarbershop.cz/en.html"/>
+    <xhtml:link rel="alternate" hreflang="de"      href="https://hirobarbershop.cz/de.html"/>
+    <xhtml:link rel="alternate" hreflang="es"      href="https://hirobarbershop.cz/es.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://hirobarbershop.cz/"/>
   </url>
 
 </urlset>
