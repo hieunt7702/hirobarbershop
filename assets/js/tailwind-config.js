@@ -26,7 +26,9 @@ tailwind.config = {
                 "body-lg": ["Work Sans", "sans-serif"],
                 "headline-md": ["Noto Serif", "serif"],
                 "label-caps": ["Work Sans", "sans-serif"],
-                "display-lg": ["Noto Serif", "serif"]
+                "display-lg": ["Oswald", "sans-serif"],
+                "display-luxury": ["Cinzel", "serif"],
+                "alfa-slab": ["Alfa Slab One", "cursive"]
             },
         }
     }
